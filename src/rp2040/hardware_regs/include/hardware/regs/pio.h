@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2022 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -11,8 +9,8 @@
 // Bus type       : ahbl
 // Description    : Programmable IO block
 // =============================================================================
-#ifndef _HARDWARE_REGS_PIO_H
-#define _HARDWARE_REGS_PIO_H
+#ifndef HARDWARE_REGS_PIO_DEFINED
+#define HARDWARE_REGS_PIO_DEFINED
 // =============================================================================
 // Register    : PIO_CTRL
 // Description : PIO control register
@@ -171,6 +169,7 @@
 #define PIO_FLEVEL_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_RX3
+// Description : None
 #define PIO_FLEVEL_RX3_RESET  _u(0x0)
 #define PIO_FLEVEL_RX3_BITS   _u(0xf0000000)
 #define PIO_FLEVEL_RX3_MSB    _u(31)
@@ -178,6 +177,7 @@
 #define PIO_FLEVEL_RX3_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_TX3
+// Description : None
 #define PIO_FLEVEL_TX3_RESET  _u(0x0)
 #define PIO_FLEVEL_TX3_BITS   _u(0x0f000000)
 #define PIO_FLEVEL_TX3_MSB    _u(27)
@@ -185,6 +185,7 @@
 #define PIO_FLEVEL_TX3_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_RX2
+// Description : None
 #define PIO_FLEVEL_RX2_RESET  _u(0x0)
 #define PIO_FLEVEL_RX2_BITS   _u(0x00f00000)
 #define PIO_FLEVEL_RX2_MSB    _u(23)
@@ -192,6 +193,7 @@
 #define PIO_FLEVEL_RX2_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_TX2
+// Description : None
 #define PIO_FLEVEL_TX2_RESET  _u(0x0)
 #define PIO_FLEVEL_TX2_BITS   _u(0x000f0000)
 #define PIO_FLEVEL_TX2_MSB    _u(19)
@@ -199,6 +201,7 @@
 #define PIO_FLEVEL_TX2_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_RX1
+// Description : None
 #define PIO_FLEVEL_RX1_RESET  _u(0x0)
 #define PIO_FLEVEL_RX1_BITS   _u(0x0000f000)
 #define PIO_FLEVEL_RX1_MSB    _u(15)
@@ -206,6 +209,7 @@
 #define PIO_FLEVEL_RX1_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_TX1
+// Description : None
 #define PIO_FLEVEL_TX1_RESET  _u(0x0)
 #define PIO_FLEVEL_TX1_BITS   _u(0x00000f00)
 #define PIO_FLEVEL_TX1_MSB    _u(11)
@@ -213,6 +217,7 @@
 #define PIO_FLEVEL_TX1_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_RX0
+// Description : None
 #define PIO_FLEVEL_RX0_RESET  _u(0x0)
 #define PIO_FLEVEL_RX0_BITS   _u(0x000000f0)
 #define PIO_FLEVEL_RX0_MSB    _u(7)
@@ -220,6 +225,7 @@
 #define PIO_FLEVEL_RX0_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_FLEVEL_TX0
+// Description : None
 #define PIO_FLEVEL_TX0_RESET  _u(0x0)
 #define PIO_FLEVEL_TX0_BITS   _u(0x0000000f)
 #define PIO_FLEVEL_TX0_MSB    _u(3)
@@ -845,11 +851,11 @@
 // Description : Comparison used for the MOV x, STATUS instruction.
 //               0x0 -> All-ones if TX FIFO level < N, otherwise all-zeroes
 //               0x1 -> All-ones if RX FIFO level < N, otherwise all-zeroes
-#define PIO_SM0_EXECCTRL_STATUS_SEL_RESET  _u(0x0)
-#define PIO_SM0_EXECCTRL_STATUS_SEL_BITS   _u(0x00000010)
-#define PIO_SM0_EXECCTRL_STATUS_SEL_MSB    _u(4)
-#define PIO_SM0_EXECCTRL_STATUS_SEL_LSB    _u(4)
-#define PIO_SM0_EXECCTRL_STATUS_SEL_ACCESS "RW"
+#define PIO_SM0_EXECCTRL_STATUS_SEL_RESET         _u(0x0)
+#define PIO_SM0_EXECCTRL_STATUS_SEL_BITS          _u(0x00000010)
+#define PIO_SM0_EXECCTRL_STATUS_SEL_MSB           _u(4)
+#define PIO_SM0_EXECCTRL_STATUS_SEL_LSB           _u(4)
+#define PIO_SM0_EXECCTRL_STATUS_SEL_ACCESS        "RW"
 #define PIO_SM0_EXECCTRL_STATUS_SEL_VALUE_TXLEVEL _u(0x0)
 #define PIO_SM0_EXECCTRL_STATUS_SEL_VALUE_RXLEVEL _u(0x1)
 // -----------------------------------------------------------------------------
@@ -1020,10 +1026,10 @@
 // Description : The lowest-numbered pin that will be affected by a side-set
 //               operation. The MSBs of an instruction's side-set/delay field
 //               (up to 5, determined by SIDESET_COUNT) are used for side-set
-//               data, with the remaining LSBs used for delay. The least-
-//               significant bit of the side-set portion is the bit written to
-//               this pin, with more-significant bits written to higher-numbered
-//               pins.
+//               data, with the remaining LSBs used for delay. The
+//               least-significant bit of the side-set portion is the bit
+//               written to this pin, with more-significant bits written to
+//               higher-numbered pins.
 #define PIO_SM0_PINCTRL_SIDESET_BASE_RESET  _u(0x00)
 #define PIO_SM0_PINCTRL_SIDESET_BASE_BITS   _u(0x00007c00)
 #define PIO_SM0_PINCTRL_SIDESET_BASE_MSB    _u(14)
@@ -1176,11 +1182,11 @@
 // Description : Comparison used for the MOV x, STATUS instruction.
 //               0x0 -> All-ones if TX FIFO level < N, otherwise all-zeroes
 //               0x1 -> All-ones if RX FIFO level < N, otherwise all-zeroes
-#define PIO_SM1_EXECCTRL_STATUS_SEL_RESET  _u(0x0)
-#define PIO_SM1_EXECCTRL_STATUS_SEL_BITS   _u(0x00000010)
-#define PIO_SM1_EXECCTRL_STATUS_SEL_MSB    _u(4)
-#define PIO_SM1_EXECCTRL_STATUS_SEL_LSB    _u(4)
-#define PIO_SM1_EXECCTRL_STATUS_SEL_ACCESS "RW"
+#define PIO_SM1_EXECCTRL_STATUS_SEL_RESET         _u(0x0)
+#define PIO_SM1_EXECCTRL_STATUS_SEL_BITS          _u(0x00000010)
+#define PIO_SM1_EXECCTRL_STATUS_SEL_MSB           _u(4)
+#define PIO_SM1_EXECCTRL_STATUS_SEL_LSB           _u(4)
+#define PIO_SM1_EXECCTRL_STATUS_SEL_ACCESS        "RW"
 #define PIO_SM1_EXECCTRL_STATUS_SEL_VALUE_TXLEVEL _u(0x0)
 #define PIO_SM1_EXECCTRL_STATUS_SEL_VALUE_RXLEVEL _u(0x1)
 // -----------------------------------------------------------------------------
@@ -1351,10 +1357,10 @@
 // Description : The lowest-numbered pin that will be affected by a side-set
 //               operation. The MSBs of an instruction's side-set/delay field
 //               (up to 5, determined by SIDESET_COUNT) are used for side-set
-//               data, with the remaining LSBs used for delay. The least-
-//               significant bit of the side-set portion is the bit written to
-//               this pin, with more-significant bits written to higher-numbered
-//               pins.
+//               data, with the remaining LSBs used for delay. The
+//               least-significant bit of the side-set portion is the bit
+//               written to this pin, with more-significant bits written to
+//               higher-numbered pins.
 #define PIO_SM1_PINCTRL_SIDESET_BASE_RESET  _u(0x00)
 #define PIO_SM1_PINCTRL_SIDESET_BASE_BITS   _u(0x00007c00)
 #define PIO_SM1_PINCTRL_SIDESET_BASE_MSB    _u(14)
@@ -1507,11 +1513,11 @@
 // Description : Comparison used for the MOV x, STATUS instruction.
 //               0x0 -> All-ones if TX FIFO level < N, otherwise all-zeroes
 //               0x1 -> All-ones if RX FIFO level < N, otherwise all-zeroes
-#define PIO_SM2_EXECCTRL_STATUS_SEL_RESET  _u(0x0)
-#define PIO_SM2_EXECCTRL_STATUS_SEL_BITS   _u(0x00000010)
-#define PIO_SM2_EXECCTRL_STATUS_SEL_MSB    _u(4)
-#define PIO_SM2_EXECCTRL_STATUS_SEL_LSB    _u(4)
-#define PIO_SM2_EXECCTRL_STATUS_SEL_ACCESS "RW"
+#define PIO_SM2_EXECCTRL_STATUS_SEL_RESET         _u(0x0)
+#define PIO_SM2_EXECCTRL_STATUS_SEL_BITS          _u(0x00000010)
+#define PIO_SM2_EXECCTRL_STATUS_SEL_MSB           _u(4)
+#define PIO_SM2_EXECCTRL_STATUS_SEL_LSB           _u(4)
+#define PIO_SM2_EXECCTRL_STATUS_SEL_ACCESS        "RW"
 #define PIO_SM2_EXECCTRL_STATUS_SEL_VALUE_TXLEVEL _u(0x0)
 #define PIO_SM2_EXECCTRL_STATUS_SEL_VALUE_RXLEVEL _u(0x1)
 // -----------------------------------------------------------------------------
@@ -1682,10 +1688,10 @@
 // Description : The lowest-numbered pin that will be affected by a side-set
 //               operation. The MSBs of an instruction's side-set/delay field
 //               (up to 5, determined by SIDESET_COUNT) are used for side-set
-//               data, with the remaining LSBs used for delay. The least-
-//               significant bit of the side-set portion is the bit written to
-//               this pin, with more-significant bits written to higher-numbered
-//               pins.
+//               data, with the remaining LSBs used for delay. The
+//               least-significant bit of the side-set portion is the bit
+//               written to this pin, with more-significant bits written to
+//               higher-numbered pins.
 #define PIO_SM2_PINCTRL_SIDESET_BASE_RESET  _u(0x00)
 #define PIO_SM2_PINCTRL_SIDESET_BASE_BITS   _u(0x00007c00)
 #define PIO_SM2_PINCTRL_SIDESET_BASE_MSB    _u(14)
@@ -1838,11 +1844,11 @@
 // Description : Comparison used for the MOV x, STATUS instruction.
 //               0x0 -> All-ones if TX FIFO level < N, otherwise all-zeroes
 //               0x1 -> All-ones if RX FIFO level < N, otherwise all-zeroes
-#define PIO_SM3_EXECCTRL_STATUS_SEL_RESET  _u(0x0)
-#define PIO_SM3_EXECCTRL_STATUS_SEL_BITS   _u(0x00000010)
-#define PIO_SM3_EXECCTRL_STATUS_SEL_MSB    _u(4)
-#define PIO_SM3_EXECCTRL_STATUS_SEL_LSB    _u(4)
-#define PIO_SM3_EXECCTRL_STATUS_SEL_ACCESS "RW"
+#define PIO_SM3_EXECCTRL_STATUS_SEL_RESET         _u(0x0)
+#define PIO_SM3_EXECCTRL_STATUS_SEL_BITS          _u(0x00000010)
+#define PIO_SM3_EXECCTRL_STATUS_SEL_MSB           _u(4)
+#define PIO_SM3_EXECCTRL_STATUS_SEL_LSB           _u(4)
+#define PIO_SM3_EXECCTRL_STATUS_SEL_ACCESS        "RW"
 #define PIO_SM3_EXECCTRL_STATUS_SEL_VALUE_TXLEVEL _u(0x0)
 #define PIO_SM3_EXECCTRL_STATUS_SEL_VALUE_RXLEVEL _u(0x1)
 // -----------------------------------------------------------------------------
@@ -2013,10 +2019,10 @@
 // Description : The lowest-numbered pin that will be affected by a side-set
 //               operation. The MSBs of an instruction's side-set/delay field
 //               (up to 5, determined by SIDESET_COUNT) are used for side-set
-//               data, with the remaining LSBs used for delay. The least-
-//               significant bit of the side-set portion is the bit written to
-//               this pin, with more-significant bits written to higher-numbered
-//               pins.
+//               data, with the remaining LSBs used for delay. The
+//               least-significant bit of the side-set portion is the bit
+//               written to this pin, with more-significant bits written to
+//               higher-numbered pins.
 #define PIO_SM3_PINCTRL_SIDESET_BASE_RESET  _u(0x00)
 #define PIO_SM3_PINCTRL_SIDESET_BASE_BITS   _u(0x00007c00)
 #define PIO_SM3_PINCTRL_SIDESET_BASE_MSB    _u(14)
@@ -2051,6 +2057,7 @@
 #define PIO_INTR_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM3
+// Description : None
 #define PIO_INTR_SM3_RESET  _u(0x0)
 #define PIO_INTR_SM3_BITS   _u(0x00000800)
 #define PIO_INTR_SM3_MSB    _u(11)
@@ -2058,6 +2065,7 @@
 #define PIO_INTR_SM3_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM2
+// Description : None
 #define PIO_INTR_SM2_RESET  _u(0x0)
 #define PIO_INTR_SM2_BITS   _u(0x00000400)
 #define PIO_INTR_SM2_MSB    _u(10)
@@ -2065,6 +2073,7 @@
 #define PIO_INTR_SM2_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM1
+// Description : None
 #define PIO_INTR_SM1_RESET  _u(0x0)
 #define PIO_INTR_SM1_BITS   _u(0x00000200)
 #define PIO_INTR_SM1_MSB    _u(9)
@@ -2072,6 +2081,7 @@
 #define PIO_INTR_SM1_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM0
+// Description : None
 #define PIO_INTR_SM0_RESET  _u(0x0)
 #define PIO_INTR_SM0_BITS   _u(0x00000100)
 #define PIO_INTR_SM0_MSB    _u(8)
@@ -2079,6 +2089,7 @@
 #define PIO_INTR_SM0_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM3_TXNFULL
+// Description : None
 #define PIO_INTR_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_INTR_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_INTR_SM3_TXNFULL_MSB    _u(7)
@@ -2086,6 +2097,7 @@
 #define PIO_INTR_SM3_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM2_TXNFULL
+// Description : None
 #define PIO_INTR_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_INTR_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_INTR_SM2_TXNFULL_MSB    _u(6)
@@ -2093,6 +2105,7 @@
 #define PIO_INTR_SM2_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM1_TXNFULL
+// Description : None
 #define PIO_INTR_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_INTR_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_INTR_SM1_TXNFULL_MSB    _u(5)
@@ -2100,6 +2113,7 @@
 #define PIO_INTR_SM1_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM0_TXNFULL
+// Description : None
 #define PIO_INTR_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_INTR_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_INTR_SM0_TXNFULL_MSB    _u(4)
@@ -2107,6 +2121,7 @@
 #define PIO_INTR_SM0_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM3_RXNEMPTY
+// Description : None
 #define PIO_INTR_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_INTR_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_INTR_SM3_RXNEMPTY_MSB    _u(3)
@@ -2114,6 +2129,7 @@
 #define PIO_INTR_SM3_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM2_RXNEMPTY
+// Description : None
 #define PIO_INTR_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_INTR_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_INTR_SM2_RXNEMPTY_MSB    _u(2)
@@ -2121,6 +2137,7 @@
 #define PIO_INTR_SM2_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM1_RXNEMPTY
+// Description : None
 #define PIO_INTR_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_INTR_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_INTR_SM1_RXNEMPTY_MSB    _u(1)
@@ -2128,6 +2145,7 @@
 #define PIO_INTR_SM1_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_INTR_SM0_RXNEMPTY
+// Description : None
 #define PIO_INTR_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_INTR_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_INTR_SM0_RXNEMPTY_MSB    _u(0)
@@ -2141,6 +2159,7 @@
 #define PIO_IRQ0_INTE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM3
+// Description : None
 #define PIO_IRQ0_INTE_SM3_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM3_BITS   _u(0x00000800)
 #define PIO_IRQ0_INTE_SM3_MSB    _u(11)
@@ -2148,6 +2167,7 @@
 #define PIO_IRQ0_INTE_SM3_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM2
+// Description : None
 #define PIO_IRQ0_INTE_SM2_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM2_BITS   _u(0x00000400)
 #define PIO_IRQ0_INTE_SM2_MSB    _u(10)
@@ -2155,6 +2175,7 @@
 #define PIO_IRQ0_INTE_SM2_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM1
+// Description : None
 #define PIO_IRQ0_INTE_SM1_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM1_BITS   _u(0x00000200)
 #define PIO_IRQ0_INTE_SM1_MSB    _u(9)
@@ -2162,6 +2183,7 @@
 #define PIO_IRQ0_INTE_SM1_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM0
+// Description : None
 #define PIO_IRQ0_INTE_SM0_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM0_BITS   _u(0x00000100)
 #define PIO_IRQ0_INTE_SM0_MSB    _u(8)
@@ -2169,6 +2191,7 @@
 #define PIO_IRQ0_INTE_SM0_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM3_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTE_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_IRQ0_INTE_SM3_TXNFULL_MSB    _u(7)
@@ -2176,6 +2199,7 @@
 #define PIO_IRQ0_INTE_SM3_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM2_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTE_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_IRQ0_INTE_SM2_TXNFULL_MSB    _u(6)
@@ -2183,6 +2207,7 @@
 #define PIO_IRQ0_INTE_SM2_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM1_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTE_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_IRQ0_INTE_SM1_TXNFULL_MSB    _u(5)
@@ -2190,6 +2215,7 @@
 #define PIO_IRQ0_INTE_SM1_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM0_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTE_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_IRQ0_INTE_SM0_TXNFULL_MSB    _u(4)
@@ -2197,6 +2223,7 @@
 #define PIO_IRQ0_INTE_SM0_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM3_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTE_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_IRQ0_INTE_SM3_RXNEMPTY_MSB    _u(3)
@@ -2204,6 +2231,7 @@
 #define PIO_IRQ0_INTE_SM3_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM2_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTE_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_IRQ0_INTE_SM2_RXNEMPTY_MSB    _u(2)
@@ -2211,6 +2239,7 @@
 #define PIO_IRQ0_INTE_SM2_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM1_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTE_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_IRQ0_INTE_SM1_RXNEMPTY_MSB    _u(1)
@@ -2218,6 +2247,7 @@
 #define PIO_IRQ0_INTE_SM1_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTE_SM0_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTE_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTE_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_IRQ0_INTE_SM0_RXNEMPTY_MSB    _u(0)
@@ -2231,6 +2261,7 @@
 #define PIO_IRQ0_INTF_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM3
+// Description : None
 #define PIO_IRQ0_INTF_SM3_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM3_BITS   _u(0x00000800)
 #define PIO_IRQ0_INTF_SM3_MSB    _u(11)
@@ -2238,6 +2269,7 @@
 #define PIO_IRQ0_INTF_SM3_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM2
+// Description : None
 #define PIO_IRQ0_INTF_SM2_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM2_BITS   _u(0x00000400)
 #define PIO_IRQ0_INTF_SM2_MSB    _u(10)
@@ -2245,6 +2277,7 @@
 #define PIO_IRQ0_INTF_SM2_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM1
+// Description : None
 #define PIO_IRQ0_INTF_SM1_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM1_BITS   _u(0x00000200)
 #define PIO_IRQ0_INTF_SM1_MSB    _u(9)
@@ -2252,6 +2285,7 @@
 #define PIO_IRQ0_INTF_SM1_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM0
+// Description : None
 #define PIO_IRQ0_INTF_SM0_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM0_BITS   _u(0x00000100)
 #define PIO_IRQ0_INTF_SM0_MSB    _u(8)
@@ -2259,6 +2293,7 @@
 #define PIO_IRQ0_INTF_SM0_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM3_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTF_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_IRQ0_INTF_SM3_TXNFULL_MSB    _u(7)
@@ -2266,6 +2301,7 @@
 #define PIO_IRQ0_INTF_SM3_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM2_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTF_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_IRQ0_INTF_SM2_TXNFULL_MSB    _u(6)
@@ -2273,6 +2309,7 @@
 #define PIO_IRQ0_INTF_SM2_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM1_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTF_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_IRQ0_INTF_SM1_TXNFULL_MSB    _u(5)
@@ -2280,6 +2317,7 @@
 #define PIO_IRQ0_INTF_SM1_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM0_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTF_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_IRQ0_INTF_SM0_TXNFULL_MSB    _u(4)
@@ -2287,6 +2325,7 @@
 #define PIO_IRQ0_INTF_SM0_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM3_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTF_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_IRQ0_INTF_SM3_RXNEMPTY_MSB    _u(3)
@@ -2294,6 +2333,7 @@
 #define PIO_IRQ0_INTF_SM3_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM2_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTF_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_IRQ0_INTF_SM2_RXNEMPTY_MSB    _u(2)
@@ -2301,6 +2341,7 @@
 #define PIO_IRQ0_INTF_SM2_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM1_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTF_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_IRQ0_INTF_SM1_RXNEMPTY_MSB    _u(1)
@@ -2308,6 +2349,7 @@
 #define PIO_IRQ0_INTF_SM1_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTF_SM0_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTF_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTF_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_IRQ0_INTF_SM0_RXNEMPTY_MSB    _u(0)
@@ -2321,6 +2363,7 @@
 #define PIO_IRQ0_INTS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM3
+// Description : None
 #define PIO_IRQ0_INTS_SM3_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM3_BITS   _u(0x00000800)
 #define PIO_IRQ0_INTS_SM3_MSB    _u(11)
@@ -2328,6 +2371,7 @@
 #define PIO_IRQ0_INTS_SM3_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM2
+// Description : None
 #define PIO_IRQ0_INTS_SM2_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM2_BITS   _u(0x00000400)
 #define PIO_IRQ0_INTS_SM2_MSB    _u(10)
@@ -2335,6 +2379,7 @@
 #define PIO_IRQ0_INTS_SM2_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM1
+// Description : None
 #define PIO_IRQ0_INTS_SM1_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM1_BITS   _u(0x00000200)
 #define PIO_IRQ0_INTS_SM1_MSB    _u(9)
@@ -2342,6 +2387,7 @@
 #define PIO_IRQ0_INTS_SM1_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM0
+// Description : None
 #define PIO_IRQ0_INTS_SM0_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM0_BITS   _u(0x00000100)
 #define PIO_IRQ0_INTS_SM0_MSB    _u(8)
@@ -2349,6 +2395,7 @@
 #define PIO_IRQ0_INTS_SM0_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM3_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTS_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_IRQ0_INTS_SM3_TXNFULL_MSB    _u(7)
@@ -2356,6 +2403,7 @@
 #define PIO_IRQ0_INTS_SM3_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM2_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTS_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_IRQ0_INTS_SM2_TXNFULL_MSB    _u(6)
@@ -2363,6 +2411,7 @@
 #define PIO_IRQ0_INTS_SM2_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM1_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTS_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_IRQ0_INTS_SM1_TXNFULL_MSB    _u(5)
@@ -2370,6 +2419,7 @@
 #define PIO_IRQ0_INTS_SM1_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM0_TXNFULL
+// Description : None
 #define PIO_IRQ0_INTS_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_IRQ0_INTS_SM0_TXNFULL_MSB    _u(4)
@@ -2377,6 +2427,7 @@
 #define PIO_IRQ0_INTS_SM0_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM3_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTS_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_IRQ0_INTS_SM3_RXNEMPTY_MSB    _u(3)
@@ -2384,6 +2435,7 @@
 #define PIO_IRQ0_INTS_SM3_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM2_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTS_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_IRQ0_INTS_SM2_RXNEMPTY_MSB    _u(2)
@@ -2391,6 +2443,7 @@
 #define PIO_IRQ0_INTS_SM2_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM1_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTS_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_IRQ0_INTS_SM1_RXNEMPTY_MSB    _u(1)
@@ -2398,6 +2451,7 @@
 #define PIO_IRQ0_INTS_SM1_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ0_INTS_SM0_RXNEMPTY
+// Description : None
 #define PIO_IRQ0_INTS_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ0_INTS_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_IRQ0_INTS_SM0_RXNEMPTY_MSB    _u(0)
@@ -2411,6 +2465,7 @@
 #define PIO_IRQ1_INTE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM3
+// Description : None
 #define PIO_IRQ1_INTE_SM3_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM3_BITS   _u(0x00000800)
 #define PIO_IRQ1_INTE_SM3_MSB    _u(11)
@@ -2418,6 +2473,7 @@
 #define PIO_IRQ1_INTE_SM3_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM2
+// Description : None
 #define PIO_IRQ1_INTE_SM2_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM2_BITS   _u(0x00000400)
 #define PIO_IRQ1_INTE_SM2_MSB    _u(10)
@@ -2425,6 +2481,7 @@
 #define PIO_IRQ1_INTE_SM2_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM1
+// Description : None
 #define PIO_IRQ1_INTE_SM1_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM1_BITS   _u(0x00000200)
 #define PIO_IRQ1_INTE_SM1_MSB    _u(9)
@@ -2432,6 +2489,7 @@
 #define PIO_IRQ1_INTE_SM1_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM0
+// Description : None
 #define PIO_IRQ1_INTE_SM0_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM0_BITS   _u(0x00000100)
 #define PIO_IRQ1_INTE_SM0_MSB    _u(8)
@@ -2439,6 +2497,7 @@
 #define PIO_IRQ1_INTE_SM0_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM3_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTE_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_IRQ1_INTE_SM3_TXNFULL_MSB    _u(7)
@@ -2446,6 +2505,7 @@
 #define PIO_IRQ1_INTE_SM3_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM2_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTE_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_IRQ1_INTE_SM2_TXNFULL_MSB    _u(6)
@@ -2453,6 +2513,7 @@
 #define PIO_IRQ1_INTE_SM2_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM1_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTE_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_IRQ1_INTE_SM1_TXNFULL_MSB    _u(5)
@@ -2460,6 +2521,7 @@
 #define PIO_IRQ1_INTE_SM1_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM0_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTE_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_IRQ1_INTE_SM0_TXNFULL_MSB    _u(4)
@@ -2467,6 +2529,7 @@
 #define PIO_IRQ1_INTE_SM0_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM3_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTE_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_IRQ1_INTE_SM3_RXNEMPTY_MSB    _u(3)
@@ -2474,6 +2537,7 @@
 #define PIO_IRQ1_INTE_SM3_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM2_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTE_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_IRQ1_INTE_SM2_RXNEMPTY_MSB    _u(2)
@@ -2481,6 +2545,7 @@
 #define PIO_IRQ1_INTE_SM2_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM1_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTE_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_IRQ1_INTE_SM1_RXNEMPTY_MSB    _u(1)
@@ -2488,6 +2553,7 @@
 #define PIO_IRQ1_INTE_SM1_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTE_SM0_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTE_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTE_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_IRQ1_INTE_SM0_RXNEMPTY_MSB    _u(0)
@@ -2501,6 +2567,7 @@
 #define PIO_IRQ1_INTF_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM3
+// Description : None
 #define PIO_IRQ1_INTF_SM3_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM3_BITS   _u(0x00000800)
 #define PIO_IRQ1_INTF_SM3_MSB    _u(11)
@@ -2508,6 +2575,7 @@
 #define PIO_IRQ1_INTF_SM3_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM2
+// Description : None
 #define PIO_IRQ1_INTF_SM2_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM2_BITS   _u(0x00000400)
 #define PIO_IRQ1_INTF_SM2_MSB    _u(10)
@@ -2515,6 +2583,7 @@
 #define PIO_IRQ1_INTF_SM2_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM1
+// Description : None
 #define PIO_IRQ1_INTF_SM1_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM1_BITS   _u(0x00000200)
 #define PIO_IRQ1_INTF_SM1_MSB    _u(9)
@@ -2522,6 +2591,7 @@
 #define PIO_IRQ1_INTF_SM1_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM0
+// Description : None
 #define PIO_IRQ1_INTF_SM0_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM0_BITS   _u(0x00000100)
 #define PIO_IRQ1_INTF_SM0_MSB    _u(8)
@@ -2529,6 +2599,7 @@
 #define PIO_IRQ1_INTF_SM0_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM3_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTF_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_IRQ1_INTF_SM3_TXNFULL_MSB    _u(7)
@@ -2536,6 +2607,7 @@
 #define PIO_IRQ1_INTF_SM3_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM2_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTF_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_IRQ1_INTF_SM2_TXNFULL_MSB    _u(6)
@@ -2543,6 +2615,7 @@
 #define PIO_IRQ1_INTF_SM2_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM1_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTF_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_IRQ1_INTF_SM1_TXNFULL_MSB    _u(5)
@@ -2550,6 +2623,7 @@
 #define PIO_IRQ1_INTF_SM1_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM0_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTF_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_IRQ1_INTF_SM0_TXNFULL_MSB    _u(4)
@@ -2557,6 +2631,7 @@
 #define PIO_IRQ1_INTF_SM0_TXNFULL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM3_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTF_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_IRQ1_INTF_SM3_RXNEMPTY_MSB    _u(3)
@@ -2564,6 +2639,7 @@
 #define PIO_IRQ1_INTF_SM3_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM2_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTF_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_IRQ1_INTF_SM2_RXNEMPTY_MSB    _u(2)
@@ -2571,6 +2647,7 @@
 #define PIO_IRQ1_INTF_SM2_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM1_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTF_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_IRQ1_INTF_SM1_RXNEMPTY_MSB    _u(1)
@@ -2578,6 +2655,7 @@
 #define PIO_IRQ1_INTF_SM1_RXNEMPTY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTF_SM0_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTF_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTF_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_IRQ1_INTF_SM0_RXNEMPTY_MSB    _u(0)
@@ -2591,6 +2669,7 @@
 #define PIO_IRQ1_INTS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM3
+// Description : None
 #define PIO_IRQ1_INTS_SM3_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM3_BITS   _u(0x00000800)
 #define PIO_IRQ1_INTS_SM3_MSB    _u(11)
@@ -2598,6 +2677,7 @@
 #define PIO_IRQ1_INTS_SM3_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM2
+// Description : None
 #define PIO_IRQ1_INTS_SM2_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM2_BITS   _u(0x00000400)
 #define PIO_IRQ1_INTS_SM2_MSB    _u(10)
@@ -2605,6 +2685,7 @@
 #define PIO_IRQ1_INTS_SM2_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM1
+// Description : None
 #define PIO_IRQ1_INTS_SM1_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM1_BITS   _u(0x00000200)
 #define PIO_IRQ1_INTS_SM1_MSB    _u(9)
@@ -2612,6 +2693,7 @@
 #define PIO_IRQ1_INTS_SM1_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM0
+// Description : None
 #define PIO_IRQ1_INTS_SM0_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM0_BITS   _u(0x00000100)
 #define PIO_IRQ1_INTS_SM0_MSB    _u(8)
@@ -2619,6 +2701,7 @@
 #define PIO_IRQ1_INTS_SM0_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM3_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTS_SM3_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM3_TXNFULL_BITS   _u(0x00000080)
 #define PIO_IRQ1_INTS_SM3_TXNFULL_MSB    _u(7)
@@ -2626,6 +2709,7 @@
 #define PIO_IRQ1_INTS_SM3_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM2_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTS_SM2_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM2_TXNFULL_BITS   _u(0x00000040)
 #define PIO_IRQ1_INTS_SM2_TXNFULL_MSB    _u(6)
@@ -2633,6 +2717,7 @@
 #define PIO_IRQ1_INTS_SM2_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM1_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTS_SM1_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM1_TXNFULL_BITS   _u(0x00000020)
 #define PIO_IRQ1_INTS_SM1_TXNFULL_MSB    _u(5)
@@ -2640,6 +2725,7 @@
 #define PIO_IRQ1_INTS_SM1_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM0_TXNFULL
+// Description : None
 #define PIO_IRQ1_INTS_SM0_TXNFULL_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM0_TXNFULL_BITS   _u(0x00000010)
 #define PIO_IRQ1_INTS_SM0_TXNFULL_MSB    _u(4)
@@ -2647,6 +2733,7 @@
 #define PIO_IRQ1_INTS_SM0_TXNFULL_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM3_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTS_SM3_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM3_RXNEMPTY_BITS   _u(0x00000008)
 #define PIO_IRQ1_INTS_SM3_RXNEMPTY_MSB    _u(3)
@@ -2654,6 +2741,7 @@
 #define PIO_IRQ1_INTS_SM3_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM2_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTS_SM2_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM2_RXNEMPTY_BITS   _u(0x00000004)
 #define PIO_IRQ1_INTS_SM2_RXNEMPTY_MSB    _u(2)
@@ -2661,6 +2749,7 @@
 #define PIO_IRQ1_INTS_SM2_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM1_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTS_SM1_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM1_RXNEMPTY_BITS   _u(0x00000002)
 #define PIO_IRQ1_INTS_SM1_RXNEMPTY_MSB    _u(1)
@@ -2668,11 +2757,11 @@
 #define PIO_IRQ1_INTS_SM1_RXNEMPTY_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : PIO_IRQ1_INTS_SM0_RXNEMPTY
+// Description : None
 #define PIO_IRQ1_INTS_SM0_RXNEMPTY_RESET  _u(0x0)
 #define PIO_IRQ1_INTS_SM0_RXNEMPTY_BITS   _u(0x00000001)
 #define PIO_IRQ1_INTS_SM0_RXNEMPTY_MSB    _u(0)
 #define PIO_IRQ1_INTS_SM0_RXNEMPTY_LSB    _u(0)
 #define PIO_IRQ1_INTS_SM0_RXNEMPTY_ACCESS "RO"
 // =============================================================================
-#endif // _HARDWARE_REGS_PIO_H
-
+#endif // HARDWARE_REGS_PIO_DEFINED

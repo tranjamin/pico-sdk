@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -9,20 +7,21 @@
 // Register block : PADS_QSPI
 // Version        : 1
 // Bus type       : apb
+// Description    : None
 // =============================================================================
-#ifndef _HARDWARE_REGS_PADS_QSPI_H
-#define _HARDWARE_REGS_PADS_QSPI_H
+#ifndef HARDWARE_REGS_PADS_QSPI_DEFINED
+#define HARDWARE_REGS_PADS_QSPI_DEFINED
 // =============================================================================
 // Register    : PADS_QSPI_VOLTAGE_SELECT
 // Description : Voltage select. Per bank control
 //               0x0 -> Set voltage to 3.3V (DVDD >= 2V5)
 //               0x1 -> Set voltage to 1.8V (DVDD <= 1V8)
-#define PADS_QSPI_VOLTAGE_SELECT_OFFSET _u(0x00000000)
-#define PADS_QSPI_VOLTAGE_SELECT_BITS   _u(0x00000001)
-#define PADS_QSPI_VOLTAGE_SELECT_RESET  _u(0x00000000)
-#define PADS_QSPI_VOLTAGE_SELECT_MSB    _u(0)
-#define PADS_QSPI_VOLTAGE_SELECT_LSB    _u(0)
-#define PADS_QSPI_VOLTAGE_SELECT_ACCESS "RW"
+#define PADS_QSPI_VOLTAGE_SELECT_OFFSET    _u(0x00000000)
+#define PADS_QSPI_VOLTAGE_SELECT_BITS      _u(0x00000001)
+#define PADS_QSPI_VOLTAGE_SELECT_RESET     _u(0x00000000)
+#define PADS_QSPI_VOLTAGE_SELECT_MSB       _u(0)
+#define PADS_QSPI_VOLTAGE_SELECT_LSB       _u(0)
+#define PADS_QSPI_VOLTAGE_SELECT_ACCESS    "RW"
 #define PADS_QSPI_VOLTAGE_SELECT_VALUE_3V3 _u(0x0)
 #define PADS_QSPI_VOLTAGE_SELECT_VALUE_1V8 _u(0x1)
 // =============================================================================
@@ -55,14 +54,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_RESET  _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_BITS   _u(0x00000030)
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_MSB    _u(5)
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_LSB    _u(4)
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_ACCESS "RW"
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_RESET      _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_BITS       _u(0x00000030)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_MSB        _u(5)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_LSB        _u(4)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_ACCESS     "RW"
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_QSPI_GPIO_QSPI_SCLK_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_QSPI_GPIO_QSPI_SCLK_PUE
@@ -126,14 +125,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_RESET  _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_BITS   _u(0x00000030)
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_MSB    _u(5)
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_LSB    _u(4)
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_ACCESS "RW"
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_RESET      _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_BITS       _u(0x00000030)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_MSB        _u(5)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_LSB        _u(4)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_ACCESS     "RW"
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_QSPI_GPIO_QSPI_SD0_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_QSPI_GPIO_QSPI_SD0_PUE
@@ -197,14 +196,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_RESET  _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_BITS   _u(0x00000030)
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_MSB    _u(5)
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_LSB    _u(4)
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_ACCESS "RW"
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_RESET      _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_BITS       _u(0x00000030)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_MSB        _u(5)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_LSB        _u(4)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_ACCESS     "RW"
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_QSPI_GPIO_QSPI_SD1_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_QSPI_GPIO_QSPI_SD1_PUE
@@ -268,14 +267,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_RESET  _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_BITS   _u(0x00000030)
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_MSB    _u(5)
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_LSB    _u(4)
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_ACCESS "RW"
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_RESET      _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_BITS       _u(0x00000030)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_MSB        _u(5)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_LSB        _u(4)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_ACCESS     "RW"
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_QSPI_GPIO_QSPI_SD2_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_QSPI_GPIO_QSPI_SD2_PUE
@@ -339,14 +338,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_RESET  _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_BITS   _u(0x00000030)
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_MSB    _u(5)
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_LSB    _u(4)
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_ACCESS "RW"
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_RESET      _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_BITS       _u(0x00000030)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_MSB        _u(5)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_LSB        _u(4)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_ACCESS     "RW"
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_QSPI_GPIO_QSPI_SD3_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_QSPI_GPIO_QSPI_SD3_PUE
@@ -410,14 +409,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_RESET  _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_BITS   _u(0x00000030)
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_MSB    _u(5)
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_LSB    _u(4)
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_ACCESS "RW"
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_RESET      _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_BITS       _u(0x00000030)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_MSB        _u(5)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_LSB        _u(4)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_ACCESS     "RW"
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_QSPI_GPIO_QSPI_SS_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_QSPI_GPIO_QSPI_SS_PUE
@@ -452,5 +451,4 @@
 #define PADS_QSPI_GPIO_QSPI_SS_SLEWFAST_LSB    _u(0)
 #define PADS_QSPI_GPIO_QSPI_SS_SLEWFAST_ACCESS "RW"
 // =============================================================================
-#endif // _HARDWARE_REGS_PADS_QSPI_H
-
+#endif // HARDWARE_REGS_PADS_QSPI_DEFINED

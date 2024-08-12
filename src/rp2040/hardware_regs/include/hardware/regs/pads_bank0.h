@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -9,20 +7,21 @@
 // Register block : PADS_BANK0
 // Version        : 1
 // Bus type       : apb
+// Description    : None
 // =============================================================================
-#ifndef _HARDWARE_REGS_PADS_BANK0_H
-#define _HARDWARE_REGS_PADS_BANK0_H
+#ifndef HARDWARE_REGS_PADS_BANK0_DEFINED
+#define HARDWARE_REGS_PADS_BANK0_DEFINED
 // =============================================================================
 // Register    : PADS_BANK0_VOLTAGE_SELECT
 // Description : Voltage select. Per bank control
 //               0x0 -> Set voltage to 3.3V (DVDD >= 2V5)
 //               0x1 -> Set voltage to 1.8V (DVDD <= 1V8)
-#define PADS_BANK0_VOLTAGE_SELECT_OFFSET _u(0x00000000)
-#define PADS_BANK0_VOLTAGE_SELECT_BITS   _u(0x00000001)
-#define PADS_BANK0_VOLTAGE_SELECT_RESET  _u(0x00000000)
-#define PADS_BANK0_VOLTAGE_SELECT_MSB    _u(0)
-#define PADS_BANK0_VOLTAGE_SELECT_LSB    _u(0)
-#define PADS_BANK0_VOLTAGE_SELECT_ACCESS "RW"
+#define PADS_BANK0_VOLTAGE_SELECT_OFFSET    _u(0x00000000)
+#define PADS_BANK0_VOLTAGE_SELECT_BITS      _u(0x00000001)
+#define PADS_BANK0_VOLTAGE_SELECT_RESET     _u(0x00000000)
+#define PADS_BANK0_VOLTAGE_SELECT_MSB       _u(0)
+#define PADS_BANK0_VOLTAGE_SELECT_LSB       _u(0)
+#define PADS_BANK0_VOLTAGE_SELECT_ACCESS    "RW"
 #define PADS_BANK0_VOLTAGE_SELECT_VALUE_3V3 _u(0x0)
 #define PADS_BANK0_VOLTAGE_SELECT_VALUE_1V8 _u(0x1)
 // =============================================================================
@@ -55,14 +54,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO0_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO0_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO0_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO0_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO0_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO0_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO0_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO0_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO0_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO0_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO0_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO0_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO0_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO0_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO0_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO0_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO0_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO0_PUE
@@ -126,14 +125,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO1_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO1_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO1_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO1_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO1_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO1_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO1_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO1_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO1_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO1_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO1_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO1_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO1_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO1_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO1_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO1_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO1_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO1_PUE
@@ -197,14 +196,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO2_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO2_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO2_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO2_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO2_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO2_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO2_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO2_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO2_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO2_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO2_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO2_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO2_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO2_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO2_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO2_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO2_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO2_PUE
@@ -268,14 +267,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO3_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO3_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO3_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO3_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO3_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO3_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO3_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO3_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO3_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO3_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO3_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO3_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO3_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO3_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO3_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO3_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO3_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO3_PUE
@@ -339,14 +338,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO4_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO4_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO4_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO4_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO4_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO4_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO4_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO4_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO4_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO4_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO4_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO4_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO4_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO4_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO4_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO4_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO4_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO4_PUE
@@ -410,14 +409,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO5_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO5_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO5_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO5_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO5_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO5_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO5_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO5_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO5_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO5_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO5_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO5_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO5_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO5_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO5_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO5_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO5_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO5_PUE
@@ -481,14 +480,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO6_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO6_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO6_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO6_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO6_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO6_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO6_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO6_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO6_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO6_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO6_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO6_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO6_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO6_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO6_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO6_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO6_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO6_PUE
@@ -552,14 +551,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO7_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO7_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO7_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO7_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO7_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO7_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO7_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO7_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO7_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO7_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO7_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO7_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO7_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO7_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO7_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO7_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO7_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO7_PUE
@@ -623,14 +622,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO8_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO8_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO8_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO8_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO8_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO8_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO8_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO8_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO8_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO8_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO8_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO8_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO8_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO8_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO8_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO8_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO8_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO8_PUE
@@ -694,14 +693,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO9_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO9_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO9_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO9_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO9_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO9_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO9_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO9_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO9_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO9_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO9_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO9_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO9_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO9_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO9_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO9_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO9_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO9_PUE
@@ -765,14 +764,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO10_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO10_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO10_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO10_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO10_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO10_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO10_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO10_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO10_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO10_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO10_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO10_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO10_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO10_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO10_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO10_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO10_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO10_PUE
@@ -836,14 +835,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO11_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO11_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO11_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO11_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO11_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO11_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO11_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO11_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO11_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO11_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO11_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO11_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO11_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO11_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO11_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO11_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO11_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO11_PUE
@@ -907,14 +906,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO12_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO12_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO12_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO12_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO12_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO12_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO12_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO12_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO12_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO12_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO12_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO12_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO12_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO12_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO12_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO12_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO12_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO12_PUE
@@ -978,14 +977,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO13_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO13_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO13_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO13_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO13_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO13_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO13_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO13_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO13_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO13_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO13_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO13_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO13_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO13_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO13_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO13_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO13_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO13_PUE
@@ -1049,14 +1048,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO14_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO14_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO14_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO14_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO14_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO14_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO14_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO14_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO14_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO14_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO14_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO14_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO14_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO14_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO14_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO14_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO14_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO14_PUE
@@ -1120,14 +1119,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO15_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO15_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO15_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO15_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO15_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO15_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO15_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO15_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO15_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO15_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO15_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO15_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO15_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO15_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO15_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO15_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO15_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO15_PUE
@@ -1191,14 +1190,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO16_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO16_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO16_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO16_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO16_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO16_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO16_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO16_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO16_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO16_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO16_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO16_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO16_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO16_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO16_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO16_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO16_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO16_PUE
@@ -1262,14 +1261,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO17_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO17_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO17_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO17_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO17_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO17_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO17_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO17_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO17_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO17_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO17_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO17_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO17_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO17_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO17_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO17_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO17_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO17_PUE
@@ -1333,14 +1332,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO18_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO18_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO18_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO18_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO18_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO18_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO18_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO18_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO18_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO18_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO18_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO18_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO18_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO18_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO18_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO18_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO18_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO18_PUE
@@ -1404,14 +1403,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO19_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO19_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO19_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO19_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO19_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO19_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO19_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO19_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO19_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO19_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO19_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO19_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO19_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO19_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO19_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO19_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO19_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO19_PUE
@@ -1475,14 +1474,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO20_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO20_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO20_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO20_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO20_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO20_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO20_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO20_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO20_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO20_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO20_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO20_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO20_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO20_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO20_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO20_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO20_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO20_PUE
@@ -1546,14 +1545,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO21_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO21_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO21_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO21_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO21_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO21_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO21_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO21_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO21_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO21_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO21_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO21_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO21_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO21_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO21_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO21_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO21_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO21_PUE
@@ -1617,14 +1616,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO22_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO22_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO22_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO22_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO22_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO22_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO22_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO22_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO22_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO22_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO22_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO22_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO22_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO22_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO22_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO22_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO22_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO22_PUE
@@ -1688,14 +1687,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO23_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO23_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO23_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO23_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO23_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO23_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO23_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO23_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO23_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO23_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO23_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO23_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO23_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO23_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO23_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO23_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO23_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO23_PUE
@@ -1759,14 +1758,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO24_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO24_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO24_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO24_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO24_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO24_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO24_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO24_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO24_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO24_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO24_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO24_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO24_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO24_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO24_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO24_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO24_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO24_PUE
@@ -1830,14 +1829,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO25_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO25_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO25_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO25_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO25_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO25_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO25_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO25_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO25_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO25_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO25_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO25_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO25_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO25_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO25_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO25_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO25_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO25_PUE
@@ -1901,14 +1900,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO26_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO26_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO26_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO26_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO26_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO26_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO26_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO26_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO26_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO26_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO26_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO26_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO26_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO26_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO26_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO26_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO26_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO26_PUE
@@ -1972,14 +1971,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO27_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO27_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO27_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO27_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO27_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO27_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO27_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO27_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO27_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO27_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO27_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO27_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO27_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO27_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO27_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO27_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO27_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO27_PUE
@@ -2043,14 +2042,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO28_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO28_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO28_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO28_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO28_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO28_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO28_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO28_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO28_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO28_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO28_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO28_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO28_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO28_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO28_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO28_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO28_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO28_PUE
@@ -2114,14 +2113,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_GPIO29_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_GPIO29_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_GPIO29_DRIVE_MSB    _u(5)
-#define PADS_BANK0_GPIO29_DRIVE_LSB    _u(4)
-#define PADS_BANK0_GPIO29_DRIVE_ACCESS "RW"
-#define PADS_BANK0_GPIO29_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_GPIO29_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_GPIO29_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_GPIO29_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_GPIO29_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_GPIO29_DRIVE_MSB        _u(5)
+#define PADS_BANK0_GPIO29_DRIVE_LSB        _u(4)
+#define PADS_BANK0_GPIO29_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_GPIO29_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_GPIO29_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_GPIO29_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_GPIO29_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_GPIO29_PUE
@@ -2185,14 +2184,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_SWCLK_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_SWCLK_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_SWCLK_DRIVE_MSB    _u(5)
-#define PADS_BANK0_SWCLK_DRIVE_LSB    _u(4)
-#define PADS_BANK0_SWCLK_DRIVE_ACCESS "RW"
-#define PADS_BANK0_SWCLK_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_SWCLK_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_SWCLK_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_SWCLK_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_SWCLK_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_SWCLK_DRIVE_MSB        _u(5)
+#define PADS_BANK0_SWCLK_DRIVE_LSB        _u(4)
+#define PADS_BANK0_SWCLK_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_SWCLK_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_SWCLK_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_SWCLK_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_SWCLK_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_SWCLK_PUE
@@ -2256,14 +2255,14 @@
 //               0x1 -> 4mA
 //               0x2 -> 8mA
 //               0x3 -> 12mA
-#define PADS_BANK0_SWD_DRIVE_RESET  _u(0x1)
-#define PADS_BANK0_SWD_DRIVE_BITS   _u(0x00000030)
-#define PADS_BANK0_SWD_DRIVE_MSB    _u(5)
-#define PADS_BANK0_SWD_DRIVE_LSB    _u(4)
-#define PADS_BANK0_SWD_DRIVE_ACCESS "RW"
-#define PADS_BANK0_SWD_DRIVE_VALUE_2MA _u(0x0)
-#define PADS_BANK0_SWD_DRIVE_VALUE_4MA _u(0x1)
-#define PADS_BANK0_SWD_DRIVE_VALUE_8MA _u(0x2)
+#define PADS_BANK0_SWD_DRIVE_RESET      _u(0x1)
+#define PADS_BANK0_SWD_DRIVE_BITS       _u(0x00000030)
+#define PADS_BANK0_SWD_DRIVE_MSB        _u(5)
+#define PADS_BANK0_SWD_DRIVE_LSB        _u(4)
+#define PADS_BANK0_SWD_DRIVE_ACCESS     "RW"
+#define PADS_BANK0_SWD_DRIVE_VALUE_2MA  _u(0x0)
+#define PADS_BANK0_SWD_DRIVE_VALUE_4MA  _u(0x1)
+#define PADS_BANK0_SWD_DRIVE_VALUE_8MA  _u(0x2)
 #define PADS_BANK0_SWD_DRIVE_VALUE_12MA _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : PADS_BANK0_SWD_PUE
@@ -2298,5 +2297,4 @@
 #define PADS_BANK0_SWD_SLEWFAST_LSB    _u(0)
 #define PADS_BANK0_SWD_SLEWFAST_ACCESS "RW"
 // =============================================================================
-#endif // _HARDWARE_REGS_PADS_BANK0_H
-
+#endif // HARDWARE_REGS_PADS_BANK0_DEFINED

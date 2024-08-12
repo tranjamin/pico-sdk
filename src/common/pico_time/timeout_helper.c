@@ -6,7 +6,7 @@
 
 #include "pico/timeout_helper.h"
 
-static bool check_single_timeout_us(timeout_state_t *ts, __unused bool reset) {
+static bool check_single_timeout_us(timeout_state_t *ts) {
     return time_reached(ts->next_timeout);
 }
 
@@ -15,13 +15,11 @@ check_timeout_fn init_single_timeout_until(timeout_state_t *ts, absolute_time_t 
     return check_single_timeout_us;
 }
 
-static bool check_per_iteration_timeout_us(timeout_state_t *ts, bool reset) {
-    if (reset) {
-        ts->next_timeout = make_timeout_time_us(ts->param);
-    }
+static bool check_per_iteration_timeout_us(timeout_state_t *ts) {
     if (time_reached(ts->next_timeout)) {
         return true;
     }
+    ts->next_timeout = make_timeout_time_us(ts->param);
     return false;
 }
 

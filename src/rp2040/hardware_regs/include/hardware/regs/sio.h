@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2022 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -13,8 +11,8 @@
 //                  Provides core-local and inter-core hardware for the two
 //                  processors, with single-cycle access.
 // =============================================================================
-#ifndef _HARDWARE_REGS_SIO_H
-#define _HARDWARE_REGS_SIO_H
+#ifndef HARDWARE_REGS_SIO_DEFINED
+#define HARDWARE_REGS_SIO_DEFINED
 // =============================================================================
 // Register    : SIO_CPUID
 // Description : Processor core identifier
@@ -442,8 +440,8 @@
 //               Writing an operand (xDIVIDEND, xDIVISOR) will immediately start
 //               a new calculation, no
 //               matter if one is already in progress.
-//               Writing to a result register will immediately terminate any in-
-//               progress calculation
+//               Writing to a result register will immediately terminate any
+//               in-progress calculation
 //               and set the READY and DIRTY flags.
 #define SIO_DIV_CSR_READY_RESET  _u(0x1)
 #define SIO_DIV_CSR_READY_BITS   _u(0x00000001)
@@ -1655,5 +1653,4 @@
 #define SIO_SPINLOCK31_LSB    _u(0)
 #define SIO_SPINLOCK31_ACCESS "RW"
 // =============================================================================
-#endif // _HARDWARE_REGS_SIO_H
-
+#endif // HARDWARE_REGS_SIO_DEFINED

@@ -15,34 +15,8 @@
 #include <memory>
 
 #include "location.h"
-#include "pio_enums.h"
 
-struct src_item {
-    yy::location location;
-
-    src_item() = default;
-
-    explicit src_item(const yy::location &location) : location(location) {}
-};
-
-struct program;
-struct pio_assembler;
-
-struct resolvable : public src_item {
-    resolvable(const yy::location &l) : src_item(l) {}
-
-    int resolve(const program &program);
-
-    int resolve(pio_assembler *pioasm, const program *program) {
-        return resolve(pioasm, program, *this);
-    }
-
-    virtual int resolve(pio_assembler *pioasm, const program *program, const resolvable &scope) = 0;
-
-    virtual ~resolvable() = default;
-};
-
-using rvalue = std::shared_ptr<resolvable>;
+typedef unsigned int uint;
 
 enum struct inst_type {
     jmp = 0x0,
@@ -93,32 +67,11 @@ enum struct mov {
     x = 0x1,
     y = 0x2,
     null = 0x3,
-    pindirs = 0x3,
     exec = 0x4,
     pc = 0x5,
     status = 0x5,
     isr = 0x6,
     osr = 0x7,
-    fifo_y = 0x8,
-    fifo_index = 0x9,
-};
-
-enum struct mov_status_type {
-    unspecified = -1,
-    tx_lessthan = 0,
-    rx_lessthan = 1,
-    irq_set = 2,
-};
-
-struct extended_mov {
-    mov loc;
-    rvalue fifo_index;
-
-    extended_mov() : loc(mov::pindirs), fifo_index(nullptr) {}
-    extended_mov(mov _type) : loc(_type), fifo_index(nullptr) {}
-    extended_mov(rvalue _fifo_index) : loc(mov::fifo_index), fifo_index(_fifo_index) {}
-
-    bool uses_fifo(void) const { return loc == mov::fifo_index || loc == mov::fifo_y; }
 };
 
 enum struct mov_op {
@@ -127,17 +80,41 @@ enum struct mov_op {
     bit_reverse = 0x2,
 };
 
+struct src_item {
+    yy::location location;
+
+    src_item() = default;
+
+    explicit src_item(const yy::location &location) : location(location) {}
+};
+
+struct program;
+struct pio_assembler;
+
+struct resolvable : public src_item {
+    resolvable(const yy::location &l) : src_item(l) {}
+
+    int resolve(const program &program);
+
+    int resolve(pio_assembler *pioasm, const program *program) {
+        return resolve(pioasm, program, *this);
+    }
+
+    virtual int resolve(pio_assembler *pioasm, const program *program, const resolvable &scope) = 0;
+};
+
+using rvalue = std::shared_ptr<resolvable>;
+
 struct wait_source {
     enum type {
         gpio = 0x0,
         pin = 0x1,
-        irq = 0x2,
-        jmppin = 0x3,
+        irq = 0x2
     } target;
     rvalue param;
-    int irq_type;
+    bool flag;
 
-    wait_source(type target, rvalue param = 0, int irq_type = 0) : target(target), param(std::move(param)), irq_type(irq_type) {}
+    wait_source(type target, rvalue param, bool flag = false) : target(target), param(std::move(param)), flag(flag) {}
 };
 
 struct name_ref : public resolvable {
@@ -182,9 +159,7 @@ struct binary_operation : public resolvable {
         divide,
         and_, // pesky C++
         or_,
-        xor_,
-        shl_,
-        shr_
+        xor_
     };
 
     op_type op;
@@ -235,12 +210,9 @@ struct instruction : public src_item {
 
     instruction(const yy::location &l) : src_item(l) {}
 
-    // validate while adding instruciton
-    virtual void pre_validate(program &program) {}
+    virtual uint encode(const program &program);
 
-    virtual uint encode(program &program);
-
-    virtual raw_encoding raw_encode(program &program);
+    virtual raw_encoding raw_encode(const program &program);
 };
 
 struct pio_assembler;
@@ -255,16 +227,6 @@ struct rvalue_loc {
     rvalue_loc(const rvalue &v, const yy::location &l) : value(v), location(l) {}
 };
 
-struct in_out {
-    yy::location location;
-    rvalue pin_count;
-    bool right;
-    bool autop;
-    rvalue threshold;
-    int final_pin_count = -1; // not specified
-    int final_threshold;
-};
-
 struct program : public src_item {
     static const int MAX_INSTRUCTIONS = 32;
 
@@ -272,42 +234,22 @@ struct program : public src_item {
     std::string name;
     rvalue_loc origin;
     rvalue_loc sideset;
-    rvalue_loc set_count;
-    in_out in;
-    in_out out;
     bool sideset_opt;
     bool sideset_pindirs;
 
     rvalue wrap_target;
     rvalue wrap;
 
-    int pio_version = 0;
-    uint clock_div_int = 1;
-    uint clock_div_frac = 0;
-    yy::location fifo_loc;
-    fifo_config fifo = fifo_config::txrx;
-    // 1 bit of bitmap per 16 pins used
-    uint8_t used_gpio_ranges = 0;
-
     std::map<std::string, std::shared_ptr<symbol>> symbols;
     std::vector<std::shared_ptr<symbol>> ordered_symbols;
     std::vector<std::shared_ptr<instruction>> instructions;
     std::map<std::string, std::vector<code_block>> code_blocks;
     std::map<std::string, std::vector<std::pair<std::string,std::string>>> lang_opts;
-    struct {
-        mov_status_type type = mov_status_type::unspecified;
-        rvalue n;
-        int param;
-        int final_n; // post finalization
-    } mov_status;
 
     // post finalization
     int delay_max;
     int sideset_bits_including_opt; // specified side set bits + 1 if we need presence flag
     int sideset_max;
-    int final_set_count = -1;
-    int final_out_count = -1;
-    int final_in_count = -1;
 
     program(pio_assembler *pioasm, const yy::location &l, std::string name) :
             src_item(l), pioasm(pioasm), name(std::move(name)), sideset_opt(true), sideset_pindirs(false) {}
@@ -326,26 +268,6 @@ struct program : public src_item {
         sideset_pindirs = pindirs;
     }
 
-    void set_out(const yy::location &l, rvalue v, bool right, bool autop, rvalue threshold) {
-        out.location = l;
-        out.pin_count = std::move(v);
-        out.right = right;
-        out.autop = autop;
-        out.threshold = threshold;
-    }
-
-    void set_in(const yy::location &l, rvalue v, bool right, bool autop, rvalue threshold) {
-        in.location = l;
-        in.pin_count = std::move(v);
-        in.right = right;
-        in.autop = autop;
-        in.threshold = threshold;
-    }
-
-    void set_set_count(const yy::location &l, rvalue v) {
-        set_count = rvalue_loc(v, l);
-    }
-
     void add_label(std::shared_ptr<symbol> label) {
         label->value = resolvable_int(label->location, instructions.size());
         add_symbol(label);
@@ -358,22 +280,7 @@ struct program : public src_item {
     void add_code_block(const code_block &block);
 
     void add_lang_opt(std::string lang, std::string name, std::string value);
-
-    void set_pio_version(const yy::location &l, int version);
-
-    void set_clock_div(const yy::location &l, float clock_div);
-
-    void set_fifo_config(const yy::location &l, fifo_config config);
-
-    void set_mov_status(mov_status_type type, rvalue n, int param = 0) {
-        mov_status.type = type;
-        mov_status.n = n;
-        mov_status.param = param;
-    }
-
     void finalize();
-protected:
-    void init_pio_version();
 };
 
 struct instr_jmp : public instruction {
@@ -382,7 +289,7 @@ struct instr_jmp : public instruction {
 
     instr_jmp(const yy::location &l, condition c, rvalue target) : instruction(l), cond(c), target(std::move(target)) { }
 
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override;
 };
 
 struct instr_wait : public instruction {
@@ -392,7 +299,7 @@ struct instr_wait : public instruction {
     instr_wait(const yy::location &l, rvalue polarity, std::shared_ptr<wait_source> source) : instruction(l), polarity(
             std::move(polarity)), source(std::move(source)) {}
 
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override;
 };
 
 struct instr_in : public instruction {
@@ -402,7 +309,7 @@ struct instr_in : public instruction {
     instr_in(const yy::location &l, const enum in_out_set &src, rvalue value) : instruction(l), src(src),
                                                                                 value(std::move(value)) {}
 
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override;
 };
 
 struct instr_out : public instruction {
@@ -412,7 +319,7 @@ struct instr_out : public instruction {
     instr_out(const yy::location &l, const enum in_out_set &dest, rvalue value) : instruction(l), dest(dest),
                                                                                   value(std::move(value)) {}
 
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override;
 };
 
 struct instr_set : public instruction {
@@ -422,7 +329,7 @@ struct instr_set : public instruction {
     instr_set(const yy::location &l, const enum in_out_set &dest, rvalue value) : instruction(l), dest(dest),
                                                                                   value(std::move(value)) {}
 
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override;
 };
 
 
@@ -432,9 +339,7 @@ struct instr_push : public instruction {
     instr_push(const yy::location &l, bool if_full, bool blocking) : instruction(l), if_full(if_full),
                                                                      blocking(blocking) {}
 
-
-    void pre_validate(program& program) override;
-    raw_encoding raw_encode(program &program) override {
+    raw_encoding raw_encode(const program &program) override {
         uint arg1 = (blocking ? 1u : 0u) | (if_full ? 0x2u : 0);
         return {inst_type::push_pull, arg1, 0};
     }
@@ -446,33 +351,33 @@ struct instr_pull : public instruction {
     instr_pull(const yy::location &l, bool if_empty, bool blocking) : instruction(l), if_empty(if_empty),
                                                                       blocking(blocking) {}
 
-    raw_encoding raw_encode(program &program) override {
+    raw_encoding raw_encode(const program &program) override {
         uint arg1 = (blocking ? 1u : 0u) | (if_empty ? 0x2u : 0) | 0x4u;
         return {inst_type::push_pull, arg1, 0};
     }
 };
 
 struct instr_mov : public instruction {
-    extended_mov dest, src;
+    enum mov dest, src;
     mov_op op;
 
-    instr_mov(const yy::location &l, const extended_mov &dest, const extended_mov &src, const mov_op& op = mov_op::none) :
+    instr_mov(const yy::location &l, const enum mov &dest, const enum mov &src, const mov_op& op = mov_op::none) :
             instruction(l), dest(dest), src(src), op(op) {}
 
-    uint get_push_get_index(const program &program, extended_mov index);
-    void pre_validate(program& program) override;
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override {
+        return {inst_type::mov, (uint) dest, (uint)src | ((uint)op << 3u)};
+    }
 };
 
 struct instr_irq : public instruction {
     enum irq modifiers;
     rvalue num;
-    int irq_type;
+    bool relative;
 
-    instr_irq(const yy::location &l, const enum irq &modifiers, rvalue num, int irq_type = 0) :
-            instruction(l), modifiers(modifiers), num(std::move(num)), irq_type(irq_type) {}
+    instr_irq(const yy::location &l, const enum irq &modifiers, rvalue num, bool relative = false) :
+            instruction(l), modifiers(modifiers), num(std::move(num)), relative(relative) {}
 
-    raw_encoding raw_encode(program &program) override;
+    raw_encoding raw_encode(const program &program) override;
 };
 
 
@@ -485,7 +390,7 @@ struct instr_word : public instruction {
 
     instr_word(const yy::location &l, rvalue encoding) : instruction(l), encoding(std::move(encoding)) {}
 
-    uint encode(program &program) override;
+    uint encode(const program &program) override;
 };
 
 #endif

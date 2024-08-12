@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -12,8 +10,8 @@
 // Description    : Testbench manager. Allows the programmer to know what
 //                  platform their software is running on.
 // =============================================================================
-#ifndef _HARDWARE_REGS_TBMAN_H
-#define _HARDWARE_REGS_TBMAN_H
+#ifndef HARDWARE_REGS_TBMAN_DEFINED
+#define HARDWARE_REGS_TBMAN_DEFINED
 // =============================================================================
 // Register    : TBMAN_PLATFORM
 // Description : Indicates the type of platform in use
@@ -37,5 +35,4 @@
 #define TBMAN_PLATFORM_ASIC_LSB    _u(0)
 #define TBMAN_PLATFORM_ASIC_ACCESS "RO"
 // =============================================================================
-#endif // _HARDWARE_REGS_TBMAN_H
-
+#endif // HARDWARE_REGS_TBMAN_DEFINED

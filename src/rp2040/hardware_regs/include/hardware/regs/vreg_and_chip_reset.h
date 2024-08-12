@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -12,8 +10,8 @@
 // Description    : control and status for on-chip voltage regulator and chip
 //                  level reset subsystem
 // =============================================================================
-#ifndef _HARDWARE_REGS_VREG_AND_CHIP_RESET_H
-#define _HARDWARE_REGS_VREG_AND_CHIP_RESET_H
+#ifndef HARDWARE_REGS_VREG_AND_CHIP_RESET_DEFINED
+#define HARDWARE_REGS_VREG_AND_CHIP_RESET_DEFINED
 // =============================================================================
 // Register    : VREG_AND_CHIP_RESET_VREG
 // Description : Voltage regulator control and status
@@ -150,5 +148,4 @@
 #define VREG_AND_CHIP_RESET_CHIP_RESET_HAD_POR_LSB    _u(8)
 #define VREG_AND_CHIP_RESET_CHIP_RESET_HAD_POR_ACCESS "RO"
 // =============================================================================
-#endif // _HARDWARE_REGS_VREG_AND_CHIP_RESET_H
-
+#endif // HARDWARE_REGS_VREG_AND_CHIP_RESET_DEFINED

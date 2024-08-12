@@ -14,14 +14,12 @@ void PICO_WEAK_FUNCTION_IMPL_NAME(tight_loop_contents)() {
 
 }
 
-
-PICO_WEAK_FUNCTION_DEF(get_core_num)
-uint PICO_WEAK_FUNCTION_IMPL_NAME(get_core_num)() {
-    return 0;
-}
-
 void __noreturn panic_unsupported() {
     panic("not supported");
+}
+
+void hard_assertion_failure(void) {
+    panic("Hard assert");
 }
 
 void panic(const char *fmt, ...) {

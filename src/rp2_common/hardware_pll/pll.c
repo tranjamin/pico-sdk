@@ -11,10 +11,10 @@
 
 /// \tag::pll_init_calculations[]
 void pll_init(PLL pll, uint refdiv, uint vco_freq, uint post_div1, uint post_div2) {
-    uint32_t ref_freq = XOSC_HZ / refdiv;
+    uint32_t ref_freq = XOSC_KHZ * KHZ / refdiv;
 
     // Check vco freq is in an acceptable range
-    assert(vco_freq >= PICO_PLL_VCO_MIN_FREQ_HZ && vco_freq <= PICO_PLL_VCO_MAX_FREQ_HZ);
+    assert(vco_freq >= (PICO_PLL_VCO_MIN_FREQ_KHZ * KHZ) && vco_freq <= (PICO_PLL_VCO_MAX_FREQ_KHZ * KHZ));
 
     // What are we multiplying the reference clock by to get the vco freq
     // (The regs are called div, because you divide the vco output and compare it to the refclk)
@@ -47,7 +47,9 @@ void pll_init(PLL pll, uint refdiv, uint vco_freq, uint post_div1, uint post_div
         return;
     }
 
-    reset_unreset_block_num_wait_blocking(PLL_RESET_NUM(pll));
+    uint32_t pll_reset = (pll_usb_hw == pll) ? RESETS_RESET_PLL_USB_BITS : RESETS_RESET_PLL_SYS_BITS;
+    reset_block(pll_reset);
+    unreset_block_wait(pll_reset);
 
     // Load VCO-related dividers before starting VCO
     pll->cs = refdiv;

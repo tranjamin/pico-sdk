@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+// todo graham #ifdef for LWIP inclusion?
+
 #include "pico/async_context.h"
 #include "pico/time.h"
 #include "lwip/tcpip.h"

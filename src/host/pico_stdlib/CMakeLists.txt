@@ -12,7 +12,6 @@ if (NOT TARGET pico_stdlib)
             pico_divider
             pico_binary_info
             pico_printf
-            pico_runtime
             pico_stdio
             hardware_gpio
             hardware_uart

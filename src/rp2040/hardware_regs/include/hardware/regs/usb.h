@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -11,8 +9,8 @@
 // Bus type       : ahbl
 // Description    : USB FS/LS controller device registers
 // =============================================================================
-#ifndef _HARDWARE_REGS_USB_H
-#define _HARDWARE_REGS_USB_H
+#ifndef HARDWARE_REGS_USB_DEFINED
+#define HARDWARE_REGS_USB_DEFINED
 // =============================================================================
 // Register    : USB_ADDR_ENDP
 // Description : Device address and endpoint control
@@ -662,6 +660,7 @@
 #define USB_SOF_WR_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_SOF_WR_COUNT
+// Description : None
 #define USB_SOF_WR_COUNT_RESET  _u(0x000)
 #define USB_SOF_WR_COUNT_BITS   _u(0x000007ff)
 #define USB_SOF_WR_COUNT_MSB    _u(10)
@@ -677,6 +676,7 @@
 #define USB_SOF_RD_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_SOF_RD_COUNT
+// Description : None
 #define USB_SOF_RD_COUNT_RESET  _u(0x000)
 #define USB_SOF_RD_COUNT_BITS   _u(0x000007ff)
 #define USB_SOF_RD_COUNT_MSB    _u(10)
@@ -1012,7 +1012,7 @@
 #define USB_SIE_STATUS_CONNECTED_BITS   _u(0x00010000)
 #define USB_SIE_STATUS_CONNECTED_MSB    _u(16)
 #define USB_SIE_STATUS_CONNECTED_LSB    _u(16)
-#define USB_SIE_STATUS_CONNECTED_ACCESS "RO"
+#define USB_SIE_STATUS_CONNECTED_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_SIE_STATUS_RESUME
 // Description : Host: Device has initiated a remote resume. Device: host has
@@ -1037,7 +1037,7 @@
 #define USB_SIE_STATUS_SPEED_BITS   _u(0x00000300)
 #define USB_SIE_STATUS_SPEED_MSB    _u(9)
 #define USB_SIE_STATUS_SPEED_LSB    _u(8)
-#define USB_SIE_STATUS_SPEED_ACCESS "RO"
+#define USB_SIE_STATUS_SPEED_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_SIE_STATUS_SUSPENDED
 // Description : Bus in suspended state. Valid for device and host. Host and
@@ -1047,7 +1047,7 @@
 #define USB_SIE_STATUS_SUSPENDED_BITS   _u(0x00000010)
 #define USB_SIE_STATUS_SUSPENDED_MSB    _u(4)
 #define USB_SIE_STATUS_SUSPENDED_LSB    _u(4)
-#define USB_SIE_STATUS_SUSPENDED_ACCESS "RO"
+#define USB_SIE_STATUS_SUSPENDED_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_SIE_STATUS_LINE_STATE
 // Description : USB bus line state
@@ -1072,7 +1072,7 @@
 #define USB_INT_EP_CTRL_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_INT_EP_CTRL_INT_EP_ACTIVE
-// Description : Host: Enable interrupt endpoint 1 => 15
+// Description : Host: Enable interrupt endpoint 1 -> 15
 #define USB_INT_EP_CTRL_INT_EP_ACTIVE_RESET  _u(0x0000)
 #define USB_INT_EP_CTRL_INT_EP_ACTIVE_BITS   _u(0x0000fffe)
 #define USB_INT_EP_CTRL_INT_EP_ACTIVE_MSB    _u(15)
@@ -1090,6 +1090,7 @@
 #define USB_BUFF_STATUS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP15_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP15_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP15_OUT_BITS   _u(0x80000000)
 #define USB_BUFF_STATUS_EP15_OUT_MSB    _u(31)
@@ -1097,6 +1098,7 @@
 #define USB_BUFF_STATUS_EP15_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP15_IN
+// Description : None
 #define USB_BUFF_STATUS_EP15_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP15_IN_BITS   _u(0x40000000)
 #define USB_BUFF_STATUS_EP15_IN_MSB    _u(30)
@@ -1104,6 +1106,7 @@
 #define USB_BUFF_STATUS_EP15_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP14_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP14_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP14_OUT_BITS   _u(0x20000000)
 #define USB_BUFF_STATUS_EP14_OUT_MSB    _u(29)
@@ -1111,6 +1114,7 @@
 #define USB_BUFF_STATUS_EP14_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP14_IN
+// Description : None
 #define USB_BUFF_STATUS_EP14_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP14_IN_BITS   _u(0x10000000)
 #define USB_BUFF_STATUS_EP14_IN_MSB    _u(28)
@@ -1118,6 +1122,7 @@
 #define USB_BUFF_STATUS_EP14_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP13_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP13_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP13_OUT_BITS   _u(0x08000000)
 #define USB_BUFF_STATUS_EP13_OUT_MSB    _u(27)
@@ -1125,6 +1130,7 @@
 #define USB_BUFF_STATUS_EP13_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP13_IN
+// Description : None
 #define USB_BUFF_STATUS_EP13_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP13_IN_BITS   _u(0x04000000)
 #define USB_BUFF_STATUS_EP13_IN_MSB    _u(26)
@@ -1132,6 +1138,7 @@
 #define USB_BUFF_STATUS_EP13_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP12_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP12_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP12_OUT_BITS   _u(0x02000000)
 #define USB_BUFF_STATUS_EP12_OUT_MSB    _u(25)
@@ -1139,6 +1146,7 @@
 #define USB_BUFF_STATUS_EP12_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP12_IN
+// Description : None
 #define USB_BUFF_STATUS_EP12_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP12_IN_BITS   _u(0x01000000)
 #define USB_BUFF_STATUS_EP12_IN_MSB    _u(24)
@@ -1146,6 +1154,7 @@
 #define USB_BUFF_STATUS_EP12_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP11_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP11_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP11_OUT_BITS   _u(0x00800000)
 #define USB_BUFF_STATUS_EP11_OUT_MSB    _u(23)
@@ -1153,6 +1162,7 @@
 #define USB_BUFF_STATUS_EP11_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP11_IN
+// Description : None
 #define USB_BUFF_STATUS_EP11_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP11_IN_BITS   _u(0x00400000)
 #define USB_BUFF_STATUS_EP11_IN_MSB    _u(22)
@@ -1160,6 +1170,7 @@
 #define USB_BUFF_STATUS_EP11_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP10_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP10_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP10_OUT_BITS   _u(0x00200000)
 #define USB_BUFF_STATUS_EP10_OUT_MSB    _u(21)
@@ -1167,6 +1178,7 @@
 #define USB_BUFF_STATUS_EP10_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP10_IN
+// Description : None
 #define USB_BUFF_STATUS_EP10_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP10_IN_BITS   _u(0x00100000)
 #define USB_BUFF_STATUS_EP10_IN_MSB    _u(20)
@@ -1174,6 +1186,7 @@
 #define USB_BUFF_STATUS_EP10_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP9_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP9_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP9_OUT_BITS   _u(0x00080000)
 #define USB_BUFF_STATUS_EP9_OUT_MSB    _u(19)
@@ -1181,6 +1194,7 @@
 #define USB_BUFF_STATUS_EP9_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP9_IN
+// Description : None
 #define USB_BUFF_STATUS_EP9_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP9_IN_BITS   _u(0x00040000)
 #define USB_BUFF_STATUS_EP9_IN_MSB    _u(18)
@@ -1188,6 +1202,7 @@
 #define USB_BUFF_STATUS_EP9_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP8_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP8_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP8_OUT_BITS   _u(0x00020000)
 #define USB_BUFF_STATUS_EP8_OUT_MSB    _u(17)
@@ -1195,6 +1210,7 @@
 #define USB_BUFF_STATUS_EP8_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP8_IN
+// Description : None
 #define USB_BUFF_STATUS_EP8_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP8_IN_BITS   _u(0x00010000)
 #define USB_BUFF_STATUS_EP8_IN_MSB    _u(16)
@@ -1202,6 +1218,7 @@
 #define USB_BUFF_STATUS_EP8_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP7_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP7_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP7_OUT_BITS   _u(0x00008000)
 #define USB_BUFF_STATUS_EP7_OUT_MSB    _u(15)
@@ -1209,6 +1226,7 @@
 #define USB_BUFF_STATUS_EP7_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP7_IN
+// Description : None
 #define USB_BUFF_STATUS_EP7_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP7_IN_BITS   _u(0x00004000)
 #define USB_BUFF_STATUS_EP7_IN_MSB    _u(14)
@@ -1216,6 +1234,7 @@
 #define USB_BUFF_STATUS_EP7_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP6_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP6_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP6_OUT_BITS   _u(0x00002000)
 #define USB_BUFF_STATUS_EP6_OUT_MSB    _u(13)
@@ -1223,6 +1242,7 @@
 #define USB_BUFF_STATUS_EP6_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP6_IN
+// Description : None
 #define USB_BUFF_STATUS_EP6_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP6_IN_BITS   _u(0x00001000)
 #define USB_BUFF_STATUS_EP6_IN_MSB    _u(12)
@@ -1230,6 +1250,7 @@
 #define USB_BUFF_STATUS_EP6_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP5_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP5_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP5_OUT_BITS   _u(0x00000800)
 #define USB_BUFF_STATUS_EP5_OUT_MSB    _u(11)
@@ -1237,6 +1258,7 @@
 #define USB_BUFF_STATUS_EP5_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP5_IN
+// Description : None
 #define USB_BUFF_STATUS_EP5_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP5_IN_BITS   _u(0x00000400)
 #define USB_BUFF_STATUS_EP5_IN_MSB    _u(10)
@@ -1244,6 +1266,7 @@
 #define USB_BUFF_STATUS_EP5_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP4_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP4_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP4_OUT_BITS   _u(0x00000200)
 #define USB_BUFF_STATUS_EP4_OUT_MSB    _u(9)
@@ -1251,6 +1274,7 @@
 #define USB_BUFF_STATUS_EP4_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP4_IN
+// Description : None
 #define USB_BUFF_STATUS_EP4_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP4_IN_BITS   _u(0x00000100)
 #define USB_BUFF_STATUS_EP4_IN_MSB    _u(8)
@@ -1258,6 +1282,7 @@
 #define USB_BUFF_STATUS_EP4_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP3_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP3_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP3_OUT_BITS   _u(0x00000080)
 #define USB_BUFF_STATUS_EP3_OUT_MSB    _u(7)
@@ -1265,6 +1290,7 @@
 #define USB_BUFF_STATUS_EP3_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP3_IN
+// Description : None
 #define USB_BUFF_STATUS_EP3_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP3_IN_BITS   _u(0x00000040)
 #define USB_BUFF_STATUS_EP3_IN_MSB    _u(6)
@@ -1272,6 +1298,7 @@
 #define USB_BUFF_STATUS_EP3_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP2_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP2_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP2_OUT_BITS   _u(0x00000020)
 #define USB_BUFF_STATUS_EP2_OUT_MSB    _u(5)
@@ -1279,6 +1306,7 @@
 #define USB_BUFF_STATUS_EP2_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP2_IN
+// Description : None
 #define USB_BUFF_STATUS_EP2_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP2_IN_BITS   _u(0x00000010)
 #define USB_BUFF_STATUS_EP2_IN_MSB    _u(4)
@@ -1286,6 +1314,7 @@
 #define USB_BUFF_STATUS_EP2_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP1_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP1_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP1_OUT_BITS   _u(0x00000008)
 #define USB_BUFF_STATUS_EP1_OUT_MSB    _u(3)
@@ -1293,6 +1322,7 @@
 #define USB_BUFF_STATUS_EP1_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP1_IN
+// Description : None
 #define USB_BUFF_STATUS_EP1_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP1_IN_BITS   _u(0x00000004)
 #define USB_BUFF_STATUS_EP1_IN_MSB    _u(2)
@@ -1300,6 +1330,7 @@
 #define USB_BUFF_STATUS_EP1_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP0_OUT
+// Description : None
 #define USB_BUFF_STATUS_EP0_OUT_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP0_OUT_BITS   _u(0x00000002)
 #define USB_BUFF_STATUS_EP0_OUT_MSB    _u(1)
@@ -1307,6 +1338,7 @@
 #define USB_BUFF_STATUS_EP0_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_STATUS_EP0_IN
+// Description : None
 #define USB_BUFF_STATUS_EP0_IN_RESET  _u(0x0)
 #define USB_BUFF_STATUS_EP0_IN_BITS   _u(0x00000001)
 #define USB_BUFF_STATUS_EP0_IN_MSB    _u(0)
@@ -1323,6 +1355,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP15_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_OUT_BITS   _u(0x80000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_OUT_MSB    _u(31)
@@ -1330,6 +1363,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP15_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_IN_BITS   _u(0x40000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_IN_MSB    _u(30)
@@ -1337,6 +1371,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP15_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP14_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_OUT_BITS   _u(0x20000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_OUT_MSB    _u(29)
@@ -1344,6 +1379,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP14_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_IN_BITS   _u(0x10000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_IN_MSB    _u(28)
@@ -1351,6 +1387,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP14_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP13_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_OUT_BITS   _u(0x08000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_OUT_MSB    _u(27)
@@ -1358,6 +1395,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP13_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_IN_BITS   _u(0x04000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_IN_MSB    _u(26)
@@ -1365,6 +1403,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP13_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP12_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_OUT_BITS   _u(0x02000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_OUT_MSB    _u(25)
@@ -1372,6 +1411,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP12_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_IN_BITS   _u(0x01000000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_IN_MSB    _u(24)
@@ -1379,6 +1419,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP12_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP11_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_OUT_BITS   _u(0x00800000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_OUT_MSB    _u(23)
@@ -1386,6 +1427,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP11_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_IN_BITS   _u(0x00400000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_IN_MSB    _u(22)
@@ -1393,6 +1435,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP11_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP10_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_OUT_BITS   _u(0x00200000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_OUT_MSB    _u(21)
@@ -1400,6 +1443,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP10_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_IN_BITS   _u(0x00100000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_IN_MSB    _u(20)
@@ -1407,6 +1451,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP10_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP9_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_OUT_BITS   _u(0x00080000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_OUT_MSB    _u(19)
@@ -1414,6 +1459,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP9_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_IN_BITS   _u(0x00040000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_IN_MSB    _u(18)
@@ -1421,6 +1467,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP9_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP8_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_OUT_BITS   _u(0x00020000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_OUT_MSB    _u(17)
@@ -1428,6 +1475,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP8_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_IN_BITS   _u(0x00010000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_IN_MSB    _u(16)
@@ -1435,6 +1483,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP8_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP7_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_OUT_BITS   _u(0x00008000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_OUT_MSB    _u(15)
@@ -1442,6 +1491,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP7_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_IN_BITS   _u(0x00004000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_IN_MSB    _u(14)
@@ -1449,6 +1499,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP7_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP6_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_OUT_BITS   _u(0x00002000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_OUT_MSB    _u(13)
@@ -1456,6 +1507,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP6_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_IN_BITS   _u(0x00001000)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_IN_MSB    _u(12)
@@ -1463,6 +1515,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP6_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP5_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_OUT_BITS   _u(0x00000800)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_OUT_MSB    _u(11)
@@ -1470,6 +1523,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP5_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_IN_BITS   _u(0x00000400)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_IN_MSB    _u(10)
@@ -1477,6 +1531,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP5_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP4_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_OUT_BITS   _u(0x00000200)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_OUT_MSB    _u(9)
@@ -1484,6 +1539,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP4_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_IN_BITS   _u(0x00000100)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_IN_MSB    _u(8)
@@ -1491,6 +1547,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP4_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP3_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_OUT_BITS   _u(0x00000080)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_OUT_MSB    _u(7)
@@ -1498,6 +1555,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP3_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_IN_BITS   _u(0x00000040)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_IN_MSB    _u(6)
@@ -1505,6 +1563,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP3_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP2_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_OUT_BITS   _u(0x00000020)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_OUT_MSB    _u(5)
@@ -1512,6 +1571,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP2_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_IN_BITS   _u(0x00000010)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_IN_MSB    _u(4)
@@ -1519,6 +1579,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP2_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP1_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_OUT_BITS   _u(0x00000008)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_OUT_MSB    _u(3)
@@ -1526,6 +1587,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP1_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_IN_BITS   _u(0x00000004)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_IN_MSB    _u(2)
@@ -1533,6 +1595,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP1_IN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP0_OUT
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_OUT_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_OUT_BITS   _u(0x00000002)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_OUT_MSB    _u(1)
@@ -1540,6 +1603,7 @@
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_OUT_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_BUFF_CPU_SHOULD_HANDLE_EP0_IN
+// Description : None
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_IN_RESET  _u(0x0)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_IN_BITS   _u(0x00000001)
 #define USB_BUFF_CPU_SHOULD_HANDLE_EP0_IN_MSB    _u(0)
@@ -1557,6 +1621,7 @@
 #define USB_EP_ABORT_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP15_OUT
+// Description : None
 #define USB_EP_ABORT_EP15_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP15_OUT_BITS   _u(0x80000000)
 #define USB_EP_ABORT_EP15_OUT_MSB    _u(31)
@@ -1564,6 +1629,7 @@
 #define USB_EP_ABORT_EP15_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP15_IN
+// Description : None
 #define USB_EP_ABORT_EP15_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP15_IN_BITS   _u(0x40000000)
 #define USB_EP_ABORT_EP15_IN_MSB    _u(30)
@@ -1571,6 +1637,7 @@
 #define USB_EP_ABORT_EP15_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP14_OUT
+// Description : None
 #define USB_EP_ABORT_EP14_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP14_OUT_BITS   _u(0x20000000)
 #define USB_EP_ABORT_EP14_OUT_MSB    _u(29)
@@ -1578,6 +1645,7 @@
 #define USB_EP_ABORT_EP14_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP14_IN
+// Description : None
 #define USB_EP_ABORT_EP14_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP14_IN_BITS   _u(0x10000000)
 #define USB_EP_ABORT_EP14_IN_MSB    _u(28)
@@ -1585,6 +1653,7 @@
 #define USB_EP_ABORT_EP14_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP13_OUT
+// Description : None
 #define USB_EP_ABORT_EP13_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP13_OUT_BITS   _u(0x08000000)
 #define USB_EP_ABORT_EP13_OUT_MSB    _u(27)
@@ -1592,6 +1661,7 @@
 #define USB_EP_ABORT_EP13_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP13_IN
+// Description : None
 #define USB_EP_ABORT_EP13_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP13_IN_BITS   _u(0x04000000)
 #define USB_EP_ABORT_EP13_IN_MSB    _u(26)
@@ -1599,6 +1669,7 @@
 #define USB_EP_ABORT_EP13_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP12_OUT
+// Description : None
 #define USB_EP_ABORT_EP12_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP12_OUT_BITS   _u(0x02000000)
 #define USB_EP_ABORT_EP12_OUT_MSB    _u(25)
@@ -1606,6 +1677,7 @@
 #define USB_EP_ABORT_EP12_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP12_IN
+// Description : None
 #define USB_EP_ABORT_EP12_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP12_IN_BITS   _u(0x01000000)
 #define USB_EP_ABORT_EP12_IN_MSB    _u(24)
@@ -1613,6 +1685,7 @@
 #define USB_EP_ABORT_EP12_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP11_OUT
+// Description : None
 #define USB_EP_ABORT_EP11_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP11_OUT_BITS   _u(0x00800000)
 #define USB_EP_ABORT_EP11_OUT_MSB    _u(23)
@@ -1620,6 +1693,7 @@
 #define USB_EP_ABORT_EP11_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP11_IN
+// Description : None
 #define USB_EP_ABORT_EP11_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP11_IN_BITS   _u(0x00400000)
 #define USB_EP_ABORT_EP11_IN_MSB    _u(22)
@@ -1627,6 +1701,7 @@
 #define USB_EP_ABORT_EP11_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP10_OUT
+// Description : None
 #define USB_EP_ABORT_EP10_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP10_OUT_BITS   _u(0x00200000)
 #define USB_EP_ABORT_EP10_OUT_MSB    _u(21)
@@ -1634,6 +1709,7 @@
 #define USB_EP_ABORT_EP10_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP10_IN
+// Description : None
 #define USB_EP_ABORT_EP10_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP10_IN_BITS   _u(0x00100000)
 #define USB_EP_ABORT_EP10_IN_MSB    _u(20)
@@ -1641,6 +1717,7 @@
 #define USB_EP_ABORT_EP10_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP9_OUT
+// Description : None
 #define USB_EP_ABORT_EP9_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP9_OUT_BITS   _u(0x00080000)
 #define USB_EP_ABORT_EP9_OUT_MSB    _u(19)
@@ -1648,6 +1725,7 @@
 #define USB_EP_ABORT_EP9_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP9_IN
+// Description : None
 #define USB_EP_ABORT_EP9_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP9_IN_BITS   _u(0x00040000)
 #define USB_EP_ABORT_EP9_IN_MSB    _u(18)
@@ -1655,6 +1733,7 @@
 #define USB_EP_ABORT_EP9_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP8_OUT
+// Description : None
 #define USB_EP_ABORT_EP8_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP8_OUT_BITS   _u(0x00020000)
 #define USB_EP_ABORT_EP8_OUT_MSB    _u(17)
@@ -1662,6 +1741,7 @@
 #define USB_EP_ABORT_EP8_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP8_IN
+// Description : None
 #define USB_EP_ABORT_EP8_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP8_IN_BITS   _u(0x00010000)
 #define USB_EP_ABORT_EP8_IN_MSB    _u(16)
@@ -1669,6 +1749,7 @@
 #define USB_EP_ABORT_EP8_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP7_OUT
+// Description : None
 #define USB_EP_ABORT_EP7_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP7_OUT_BITS   _u(0x00008000)
 #define USB_EP_ABORT_EP7_OUT_MSB    _u(15)
@@ -1676,6 +1757,7 @@
 #define USB_EP_ABORT_EP7_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP7_IN
+// Description : None
 #define USB_EP_ABORT_EP7_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP7_IN_BITS   _u(0x00004000)
 #define USB_EP_ABORT_EP7_IN_MSB    _u(14)
@@ -1683,6 +1765,7 @@
 #define USB_EP_ABORT_EP7_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP6_OUT
+// Description : None
 #define USB_EP_ABORT_EP6_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP6_OUT_BITS   _u(0x00002000)
 #define USB_EP_ABORT_EP6_OUT_MSB    _u(13)
@@ -1690,6 +1773,7 @@
 #define USB_EP_ABORT_EP6_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP6_IN
+// Description : None
 #define USB_EP_ABORT_EP6_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP6_IN_BITS   _u(0x00001000)
 #define USB_EP_ABORT_EP6_IN_MSB    _u(12)
@@ -1697,6 +1781,7 @@
 #define USB_EP_ABORT_EP6_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP5_OUT
+// Description : None
 #define USB_EP_ABORT_EP5_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP5_OUT_BITS   _u(0x00000800)
 #define USB_EP_ABORT_EP5_OUT_MSB    _u(11)
@@ -1704,6 +1789,7 @@
 #define USB_EP_ABORT_EP5_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP5_IN
+// Description : None
 #define USB_EP_ABORT_EP5_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP5_IN_BITS   _u(0x00000400)
 #define USB_EP_ABORT_EP5_IN_MSB    _u(10)
@@ -1711,6 +1797,7 @@
 #define USB_EP_ABORT_EP5_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP4_OUT
+// Description : None
 #define USB_EP_ABORT_EP4_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP4_OUT_BITS   _u(0x00000200)
 #define USB_EP_ABORT_EP4_OUT_MSB    _u(9)
@@ -1718,6 +1805,7 @@
 #define USB_EP_ABORT_EP4_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP4_IN
+// Description : None
 #define USB_EP_ABORT_EP4_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP4_IN_BITS   _u(0x00000100)
 #define USB_EP_ABORT_EP4_IN_MSB    _u(8)
@@ -1725,6 +1813,7 @@
 #define USB_EP_ABORT_EP4_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP3_OUT
+// Description : None
 #define USB_EP_ABORT_EP3_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP3_OUT_BITS   _u(0x00000080)
 #define USB_EP_ABORT_EP3_OUT_MSB    _u(7)
@@ -1732,6 +1821,7 @@
 #define USB_EP_ABORT_EP3_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP3_IN
+// Description : None
 #define USB_EP_ABORT_EP3_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP3_IN_BITS   _u(0x00000040)
 #define USB_EP_ABORT_EP3_IN_MSB    _u(6)
@@ -1739,6 +1829,7 @@
 #define USB_EP_ABORT_EP3_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP2_OUT
+// Description : None
 #define USB_EP_ABORT_EP2_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP2_OUT_BITS   _u(0x00000020)
 #define USB_EP_ABORT_EP2_OUT_MSB    _u(5)
@@ -1746,6 +1837,7 @@
 #define USB_EP_ABORT_EP2_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP2_IN
+// Description : None
 #define USB_EP_ABORT_EP2_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP2_IN_BITS   _u(0x00000010)
 #define USB_EP_ABORT_EP2_IN_MSB    _u(4)
@@ -1753,6 +1845,7 @@
 #define USB_EP_ABORT_EP2_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP1_OUT
+// Description : None
 #define USB_EP_ABORT_EP1_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP1_OUT_BITS   _u(0x00000008)
 #define USB_EP_ABORT_EP1_OUT_MSB    _u(3)
@@ -1760,6 +1853,7 @@
 #define USB_EP_ABORT_EP1_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP1_IN
+// Description : None
 #define USB_EP_ABORT_EP1_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP1_IN_BITS   _u(0x00000004)
 #define USB_EP_ABORT_EP1_IN_MSB    _u(2)
@@ -1767,6 +1861,7 @@
 #define USB_EP_ABORT_EP1_IN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP0_OUT
+// Description : None
 #define USB_EP_ABORT_EP0_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_EP0_OUT_BITS   _u(0x00000002)
 #define USB_EP_ABORT_EP0_OUT_MSB    _u(1)
@@ -1774,6 +1869,7 @@
 #define USB_EP_ABORT_EP0_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_EP0_IN
+// Description : None
 #define USB_EP_ABORT_EP0_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_EP0_IN_BITS   _u(0x00000001)
 #define USB_EP_ABORT_EP0_IN_MSB    _u(0)
@@ -1789,6 +1885,7 @@
 #define USB_EP_ABORT_DONE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP15_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP15_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP15_OUT_BITS   _u(0x80000000)
 #define USB_EP_ABORT_DONE_EP15_OUT_MSB    _u(31)
@@ -1796,6 +1893,7 @@
 #define USB_EP_ABORT_DONE_EP15_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP15_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP15_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP15_IN_BITS   _u(0x40000000)
 #define USB_EP_ABORT_DONE_EP15_IN_MSB    _u(30)
@@ -1803,6 +1901,7 @@
 #define USB_EP_ABORT_DONE_EP15_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP14_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP14_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP14_OUT_BITS   _u(0x20000000)
 #define USB_EP_ABORT_DONE_EP14_OUT_MSB    _u(29)
@@ -1810,6 +1909,7 @@
 #define USB_EP_ABORT_DONE_EP14_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP14_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP14_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP14_IN_BITS   _u(0x10000000)
 #define USB_EP_ABORT_DONE_EP14_IN_MSB    _u(28)
@@ -1817,6 +1917,7 @@
 #define USB_EP_ABORT_DONE_EP14_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP13_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP13_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP13_OUT_BITS   _u(0x08000000)
 #define USB_EP_ABORT_DONE_EP13_OUT_MSB    _u(27)
@@ -1824,6 +1925,7 @@
 #define USB_EP_ABORT_DONE_EP13_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP13_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP13_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP13_IN_BITS   _u(0x04000000)
 #define USB_EP_ABORT_DONE_EP13_IN_MSB    _u(26)
@@ -1831,6 +1933,7 @@
 #define USB_EP_ABORT_DONE_EP13_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP12_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP12_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP12_OUT_BITS   _u(0x02000000)
 #define USB_EP_ABORT_DONE_EP12_OUT_MSB    _u(25)
@@ -1838,6 +1941,7 @@
 #define USB_EP_ABORT_DONE_EP12_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP12_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP12_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP12_IN_BITS   _u(0x01000000)
 #define USB_EP_ABORT_DONE_EP12_IN_MSB    _u(24)
@@ -1845,6 +1949,7 @@
 #define USB_EP_ABORT_DONE_EP12_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP11_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP11_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP11_OUT_BITS   _u(0x00800000)
 #define USB_EP_ABORT_DONE_EP11_OUT_MSB    _u(23)
@@ -1852,6 +1957,7 @@
 #define USB_EP_ABORT_DONE_EP11_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP11_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP11_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP11_IN_BITS   _u(0x00400000)
 #define USB_EP_ABORT_DONE_EP11_IN_MSB    _u(22)
@@ -1859,6 +1965,7 @@
 #define USB_EP_ABORT_DONE_EP11_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP10_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP10_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP10_OUT_BITS   _u(0x00200000)
 #define USB_EP_ABORT_DONE_EP10_OUT_MSB    _u(21)
@@ -1866,6 +1973,7 @@
 #define USB_EP_ABORT_DONE_EP10_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP10_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP10_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP10_IN_BITS   _u(0x00100000)
 #define USB_EP_ABORT_DONE_EP10_IN_MSB    _u(20)
@@ -1873,6 +1981,7 @@
 #define USB_EP_ABORT_DONE_EP10_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP9_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP9_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP9_OUT_BITS   _u(0x00080000)
 #define USB_EP_ABORT_DONE_EP9_OUT_MSB    _u(19)
@@ -1880,6 +1989,7 @@
 #define USB_EP_ABORT_DONE_EP9_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP9_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP9_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP9_IN_BITS   _u(0x00040000)
 #define USB_EP_ABORT_DONE_EP9_IN_MSB    _u(18)
@@ -1887,6 +1997,7 @@
 #define USB_EP_ABORT_DONE_EP9_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP8_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP8_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP8_OUT_BITS   _u(0x00020000)
 #define USB_EP_ABORT_DONE_EP8_OUT_MSB    _u(17)
@@ -1894,6 +2005,7 @@
 #define USB_EP_ABORT_DONE_EP8_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP8_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP8_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP8_IN_BITS   _u(0x00010000)
 #define USB_EP_ABORT_DONE_EP8_IN_MSB    _u(16)
@@ -1901,6 +2013,7 @@
 #define USB_EP_ABORT_DONE_EP8_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP7_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP7_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP7_OUT_BITS   _u(0x00008000)
 #define USB_EP_ABORT_DONE_EP7_OUT_MSB    _u(15)
@@ -1908,6 +2021,7 @@
 #define USB_EP_ABORT_DONE_EP7_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP7_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP7_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP7_IN_BITS   _u(0x00004000)
 #define USB_EP_ABORT_DONE_EP7_IN_MSB    _u(14)
@@ -1915,6 +2029,7 @@
 #define USB_EP_ABORT_DONE_EP7_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP6_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP6_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP6_OUT_BITS   _u(0x00002000)
 #define USB_EP_ABORT_DONE_EP6_OUT_MSB    _u(13)
@@ -1922,6 +2037,7 @@
 #define USB_EP_ABORT_DONE_EP6_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP6_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP6_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP6_IN_BITS   _u(0x00001000)
 #define USB_EP_ABORT_DONE_EP6_IN_MSB    _u(12)
@@ -1929,6 +2045,7 @@
 #define USB_EP_ABORT_DONE_EP6_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP5_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP5_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP5_OUT_BITS   _u(0x00000800)
 #define USB_EP_ABORT_DONE_EP5_OUT_MSB    _u(11)
@@ -1936,6 +2053,7 @@
 #define USB_EP_ABORT_DONE_EP5_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP5_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP5_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP5_IN_BITS   _u(0x00000400)
 #define USB_EP_ABORT_DONE_EP5_IN_MSB    _u(10)
@@ -1943,6 +2061,7 @@
 #define USB_EP_ABORT_DONE_EP5_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP4_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP4_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP4_OUT_BITS   _u(0x00000200)
 #define USB_EP_ABORT_DONE_EP4_OUT_MSB    _u(9)
@@ -1950,6 +2069,7 @@
 #define USB_EP_ABORT_DONE_EP4_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP4_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP4_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP4_IN_BITS   _u(0x00000100)
 #define USB_EP_ABORT_DONE_EP4_IN_MSB    _u(8)
@@ -1957,6 +2077,7 @@
 #define USB_EP_ABORT_DONE_EP4_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP3_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP3_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP3_OUT_BITS   _u(0x00000080)
 #define USB_EP_ABORT_DONE_EP3_OUT_MSB    _u(7)
@@ -1964,6 +2085,7 @@
 #define USB_EP_ABORT_DONE_EP3_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP3_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP3_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP3_IN_BITS   _u(0x00000040)
 #define USB_EP_ABORT_DONE_EP3_IN_MSB    _u(6)
@@ -1971,6 +2093,7 @@
 #define USB_EP_ABORT_DONE_EP3_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP2_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP2_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP2_OUT_BITS   _u(0x00000020)
 #define USB_EP_ABORT_DONE_EP2_OUT_MSB    _u(5)
@@ -1978,6 +2101,7 @@
 #define USB_EP_ABORT_DONE_EP2_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP2_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP2_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP2_IN_BITS   _u(0x00000010)
 #define USB_EP_ABORT_DONE_EP2_IN_MSB    _u(4)
@@ -1985,6 +2109,7 @@
 #define USB_EP_ABORT_DONE_EP2_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP1_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP1_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP1_OUT_BITS   _u(0x00000008)
 #define USB_EP_ABORT_DONE_EP1_OUT_MSB    _u(3)
@@ -1992,6 +2117,7 @@
 #define USB_EP_ABORT_DONE_EP1_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP1_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP1_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP1_IN_BITS   _u(0x00000004)
 #define USB_EP_ABORT_DONE_EP1_IN_MSB    _u(2)
@@ -1999,6 +2125,7 @@
 #define USB_EP_ABORT_DONE_EP1_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP0_OUT
+// Description : None
 #define USB_EP_ABORT_DONE_EP0_OUT_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP0_OUT_BITS   _u(0x00000002)
 #define USB_EP_ABORT_DONE_EP0_OUT_MSB    _u(1)
@@ -2006,6 +2133,7 @@
 #define USB_EP_ABORT_DONE_EP0_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_ABORT_DONE_EP0_IN
+// Description : None
 #define USB_EP_ABORT_DONE_EP0_IN_RESET  _u(0x0)
 #define USB_EP_ABORT_DONE_EP0_IN_BITS   _u(0x00000001)
 #define USB_EP_ABORT_DONE_EP0_IN_MSB    _u(0)
@@ -2023,6 +2151,7 @@
 #define USB_EP_STALL_ARM_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STALL_ARM_EP0_OUT
+// Description : None
 #define USB_EP_STALL_ARM_EP0_OUT_RESET  _u(0x0)
 #define USB_EP_STALL_ARM_EP0_OUT_BITS   _u(0x00000002)
 #define USB_EP_STALL_ARM_EP0_OUT_MSB    _u(1)
@@ -2030,6 +2159,7 @@
 #define USB_EP_STALL_ARM_EP0_OUT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STALL_ARM_EP0_IN
+// Description : None
 #define USB_EP_STALL_ARM_EP0_IN_RESET  _u(0x0)
 #define USB_EP_STALL_ARM_EP0_IN_BITS   _u(0x00000001)
 #define USB_EP_STALL_ARM_EP0_IN_MSB    _u(0)
@@ -2068,6 +2198,7 @@
 #define USB_EP_STATUS_STALL_NAK_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP15_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP15_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP15_OUT_BITS   _u(0x80000000)
 #define USB_EP_STATUS_STALL_NAK_EP15_OUT_MSB    _u(31)
@@ -2075,6 +2206,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP15_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP15_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP15_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP15_IN_BITS   _u(0x40000000)
 #define USB_EP_STATUS_STALL_NAK_EP15_IN_MSB    _u(30)
@@ -2082,6 +2214,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP15_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP14_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP14_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP14_OUT_BITS   _u(0x20000000)
 #define USB_EP_STATUS_STALL_NAK_EP14_OUT_MSB    _u(29)
@@ -2089,6 +2222,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP14_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP14_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP14_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP14_IN_BITS   _u(0x10000000)
 #define USB_EP_STATUS_STALL_NAK_EP14_IN_MSB    _u(28)
@@ -2096,6 +2230,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP14_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP13_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP13_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP13_OUT_BITS   _u(0x08000000)
 #define USB_EP_STATUS_STALL_NAK_EP13_OUT_MSB    _u(27)
@@ -2103,6 +2238,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP13_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP13_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP13_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP13_IN_BITS   _u(0x04000000)
 #define USB_EP_STATUS_STALL_NAK_EP13_IN_MSB    _u(26)
@@ -2110,6 +2246,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP13_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP12_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP12_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP12_OUT_BITS   _u(0x02000000)
 #define USB_EP_STATUS_STALL_NAK_EP12_OUT_MSB    _u(25)
@@ -2117,6 +2254,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP12_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP12_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP12_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP12_IN_BITS   _u(0x01000000)
 #define USB_EP_STATUS_STALL_NAK_EP12_IN_MSB    _u(24)
@@ -2124,6 +2262,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP12_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP11_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP11_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP11_OUT_BITS   _u(0x00800000)
 #define USB_EP_STATUS_STALL_NAK_EP11_OUT_MSB    _u(23)
@@ -2131,6 +2270,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP11_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP11_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP11_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP11_IN_BITS   _u(0x00400000)
 #define USB_EP_STATUS_STALL_NAK_EP11_IN_MSB    _u(22)
@@ -2138,6 +2278,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP11_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP10_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP10_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP10_OUT_BITS   _u(0x00200000)
 #define USB_EP_STATUS_STALL_NAK_EP10_OUT_MSB    _u(21)
@@ -2145,6 +2286,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP10_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP10_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP10_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP10_IN_BITS   _u(0x00100000)
 #define USB_EP_STATUS_STALL_NAK_EP10_IN_MSB    _u(20)
@@ -2152,6 +2294,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP10_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP9_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP9_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP9_OUT_BITS   _u(0x00080000)
 #define USB_EP_STATUS_STALL_NAK_EP9_OUT_MSB    _u(19)
@@ -2159,6 +2302,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP9_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP9_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP9_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP9_IN_BITS   _u(0x00040000)
 #define USB_EP_STATUS_STALL_NAK_EP9_IN_MSB    _u(18)
@@ -2166,6 +2310,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP9_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP8_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP8_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP8_OUT_BITS   _u(0x00020000)
 #define USB_EP_STATUS_STALL_NAK_EP8_OUT_MSB    _u(17)
@@ -2173,6 +2318,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP8_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP8_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP8_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP8_IN_BITS   _u(0x00010000)
 #define USB_EP_STATUS_STALL_NAK_EP8_IN_MSB    _u(16)
@@ -2180,6 +2326,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP8_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP7_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP7_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP7_OUT_BITS   _u(0x00008000)
 #define USB_EP_STATUS_STALL_NAK_EP7_OUT_MSB    _u(15)
@@ -2187,6 +2334,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP7_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP7_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP7_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP7_IN_BITS   _u(0x00004000)
 #define USB_EP_STATUS_STALL_NAK_EP7_IN_MSB    _u(14)
@@ -2194,6 +2342,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP7_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP6_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP6_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP6_OUT_BITS   _u(0x00002000)
 #define USB_EP_STATUS_STALL_NAK_EP6_OUT_MSB    _u(13)
@@ -2201,6 +2350,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP6_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP6_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP6_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP6_IN_BITS   _u(0x00001000)
 #define USB_EP_STATUS_STALL_NAK_EP6_IN_MSB    _u(12)
@@ -2208,6 +2358,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP6_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP5_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP5_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP5_OUT_BITS   _u(0x00000800)
 #define USB_EP_STATUS_STALL_NAK_EP5_OUT_MSB    _u(11)
@@ -2215,6 +2366,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP5_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP5_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP5_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP5_IN_BITS   _u(0x00000400)
 #define USB_EP_STATUS_STALL_NAK_EP5_IN_MSB    _u(10)
@@ -2222,6 +2374,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP5_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP4_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP4_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP4_OUT_BITS   _u(0x00000200)
 #define USB_EP_STATUS_STALL_NAK_EP4_OUT_MSB    _u(9)
@@ -2229,6 +2382,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP4_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP4_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP4_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP4_IN_BITS   _u(0x00000100)
 #define USB_EP_STATUS_STALL_NAK_EP4_IN_MSB    _u(8)
@@ -2236,6 +2390,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP4_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP3_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP3_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP3_OUT_BITS   _u(0x00000080)
 #define USB_EP_STATUS_STALL_NAK_EP3_OUT_MSB    _u(7)
@@ -2243,6 +2398,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP3_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP3_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP3_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP3_IN_BITS   _u(0x00000040)
 #define USB_EP_STATUS_STALL_NAK_EP3_IN_MSB    _u(6)
@@ -2250,6 +2406,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP3_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP2_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP2_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP2_OUT_BITS   _u(0x00000020)
 #define USB_EP_STATUS_STALL_NAK_EP2_OUT_MSB    _u(5)
@@ -2257,6 +2414,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP2_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP2_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP2_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP2_IN_BITS   _u(0x00000010)
 #define USB_EP_STATUS_STALL_NAK_EP2_IN_MSB    _u(4)
@@ -2264,6 +2422,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP2_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP1_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP1_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP1_OUT_BITS   _u(0x00000008)
 #define USB_EP_STATUS_STALL_NAK_EP1_OUT_MSB    _u(3)
@@ -2271,6 +2430,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP1_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP1_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP1_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP1_IN_BITS   _u(0x00000004)
 #define USB_EP_STATUS_STALL_NAK_EP1_IN_MSB    _u(2)
@@ -2278,6 +2438,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP1_IN_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP0_OUT
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP0_OUT_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP0_OUT_BITS   _u(0x00000002)
 #define USB_EP_STATUS_STALL_NAK_EP0_OUT_MSB    _u(1)
@@ -2285,6 +2446,7 @@
 #define USB_EP_STATUS_STALL_NAK_EP0_OUT_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : USB_EP_STATUS_STALL_NAK_EP0_IN
+// Description : None
 #define USB_EP_STATUS_STALL_NAK_EP0_IN_RESET  _u(0x0)
 #define USB_EP_STATUS_STALL_NAK_EP0_IN_BITS   _u(0x00000001)
 #define USB_EP_STATUS_STALL_NAK_EP0_IN_MSB    _u(0)
@@ -2299,6 +2461,7 @@
 #define USB_USB_MUXING_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_MUXING_SOFTCON
+// Description : None
 #define USB_USB_MUXING_SOFTCON_RESET  _u(0x0)
 #define USB_USB_MUXING_SOFTCON_BITS   _u(0x00000008)
 #define USB_USB_MUXING_SOFTCON_MSB    _u(3)
@@ -2306,6 +2469,7 @@
 #define USB_USB_MUXING_SOFTCON_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_MUXING_TO_DIGITAL_PAD
+// Description : None
 #define USB_USB_MUXING_TO_DIGITAL_PAD_RESET  _u(0x0)
 #define USB_USB_MUXING_TO_DIGITAL_PAD_BITS   _u(0x00000004)
 #define USB_USB_MUXING_TO_DIGITAL_PAD_MSB    _u(2)
@@ -2313,6 +2477,7 @@
 #define USB_USB_MUXING_TO_DIGITAL_PAD_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_MUXING_TO_EXTPHY
+// Description : None
 #define USB_USB_MUXING_TO_EXTPHY_RESET  _u(0x0)
 #define USB_USB_MUXING_TO_EXTPHY_BITS   _u(0x00000002)
 #define USB_USB_MUXING_TO_EXTPHY_MSB    _u(1)
@@ -2320,6 +2485,7 @@
 #define USB_USB_MUXING_TO_EXTPHY_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_MUXING_TO_PHY
+// Description : None
 #define USB_USB_MUXING_TO_PHY_RESET  _u(0x0)
 #define USB_USB_MUXING_TO_PHY_BITS   _u(0x00000001)
 #define USB_USB_MUXING_TO_PHY_MSB    _u(0)
@@ -2329,13 +2495,14 @@
 // Register    : USB_USB_PWR
 // Description : Overrides for the power signals in the event that the VBUS
 //               signals are not hooked up to GPIO. Set the value of the
-//               override and then the override enable so switch over to the
+//               override and then the override enable to switch over to the
 //               override value.
 #define USB_USB_PWR_OFFSET _u(0x00000078)
 #define USB_USB_PWR_BITS   _u(0x0000003f)
 #define USB_USB_PWR_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_PWR_OVERCURR_DETECT_EN
+// Description : None
 #define USB_USB_PWR_OVERCURR_DETECT_EN_RESET  _u(0x0)
 #define USB_USB_PWR_OVERCURR_DETECT_EN_BITS   _u(0x00000020)
 #define USB_USB_PWR_OVERCURR_DETECT_EN_MSB    _u(5)
@@ -2343,6 +2510,7 @@
 #define USB_USB_PWR_OVERCURR_DETECT_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_PWR_OVERCURR_DETECT
+// Description : None
 #define USB_USB_PWR_OVERCURR_DETECT_RESET  _u(0x0)
 #define USB_USB_PWR_OVERCURR_DETECT_BITS   _u(0x00000010)
 #define USB_USB_PWR_OVERCURR_DETECT_MSB    _u(4)
@@ -2350,6 +2518,7 @@
 #define USB_USB_PWR_OVERCURR_DETECT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_PWR_VBUS_DETECT_OVERRIDE_EN
+// Description : None
 #define USB_USB_PWR_VBUS_DETECT_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USB_PWR_VBUS_DETECT_OVERRIDE_EN_BITS   _u(0x00000008)
 #define USB_USB_PWR_VBUS_DETECT_OVERRIDE_EN_MSB    _u(3)
@@ -2357,6 +2526,7 @@
 #define USB_USB_PWR_VBUS_DETECT_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_PWR_VBUS_DETECT
+// Description : None
 #define USB_USB_PWR_VBUS_DETECT_RESET  _u(0x0)
 #define USB_USB_PWR_VBUS_DETECT_BITS   _u(0x00000004)
 #define USB_USB_PWR_VBUS_DETECT_MSB    _u(2)
@@ -2364,6 +2534,7 @@
 #define USB_USB_PWR_VBUS_DETECT_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_PWR_VBUS_EN_OVERRIDE_EN
+// Description : None
 #define USB_USB_PWR_VBUS_EN_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USB_PWR_VBUS_EN_OVERRIDE_EN_BITS   _u(0x00000002)
 #define USB_USB_PWR_VBUS_EN_OVERRIDE_EN_MSB    _u(1)
@@ -2371,6 +2542,7 @@
 #define USB_USB_PWR_VBUS_EN_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USB_PWR_VBUS_EN
+// Description : None
 #define USB_USB_PWR_VBUS_EN_RESET  _u(0x0)
 #define USB_USB_PWR_VBUS_EN_BITS   _u(0x00000001)
 #define USB_USB_PWR_VBUS_EN_MSB    _u(0)
@@ -2378,17 +2550,15 @@
 #define USB_USB_PWR_VBUS_EN_ACCESS "RW"
 // =============================================================================
 // Register    : USB_USBPHY_DIRECT
-// Description : Note that most functions are driven directly from usb_fsls
-//               controller.  This register allows more detailed control/status
-//               from the USB PHY. Useful for debug but not expected to be used
-//               in normal operation
-//               Use in conjunction with usbphy_direct_override register
+// Description : This register allows for direct control of the USB phy. Use in
+//               conjunction with usbphy_direct_override register to enable each
+//               override bit.
 #define USB_USBPHY_DIRECT_OFFSET _u(0x0000007c)
 #define USB_USBPHY_DIRECT_BITS   _u(0x007fff77)
 #define USB_USBPHY_DIRECT_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DM_OVV
-// Description : Status bit from USB PHY
+// Description : DM over voltage
 #define USB_USBPHY_DIRECT_DM_OVV_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DM_OVV_BITS   _u(0x00400000)
 #define USB_USBPHY_DIRECT_DM_OVV_MSB    _u(22)
@@ -2396,7 +2566,7 @@
 #define USB_USBPHY_DIRECT_DM_OVV_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DP_OVV
-// Description : Status bit from USB PHY
+// Description : DP over voltage
 #define USB_USBPHY_DIRECT_DP_OVV_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DP_OVV_BITS   _u(0x00200000)
 #define USB_USBPHY_DIRECT_DP_OVV_MSB    _u(21)
@@ -2404,7 +2574,7 @@
 #define USB_USBPHY_DIRECT_DP_OVV_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DM_OVCN
-// Description : Status bit from USB PHY
+// Description : DM overcurrent
 #define USB_USBPHY_DIRECT_DM_OVCN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DM_OVCN_BITS   _u(0x00100000)
 #define USB_USBPHY_DIRECT_DM_OVCN_MSB    _u(20)
@@ -2412,7 +2582,7 @@
 #define USB_USBPHY_DIRECT_DM_OVCN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DP_OVCN
-// Description : Status bit from USB PHY
+// Description : DP overcurrent
 #define USB_USBPHY_DIRECT_DP_OVCN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DP_OVCN_BITS   _u(0x00080000)
 #define USB_USBPHY_DIRECT_DP_OVCN_MSB    _u(19)
@@ -2420,8 +2590,7 @@
 #define USB_USBPHY_DIRECT_DP_OVCN_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_RX_DM
-// Description : Status bit from USB PHY
-//               DPM pin state
+// Description : DPM pin state
 #define USB_USBPHY_DIRECT_RX_DM_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_RX_DM_BITS   _u(0x00040000)
 #define USB_USBPHY_DIRECT_RX_DM_MSB    _u(18)
@@ -2429,8 +2598,7 @@
 #define USB_USBPHY_DIRECT_RX_DM_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_RX_DP
-// Description : Status bit from USB PHY
-//               DPP pin state
+// Description : DPP pin state
 #define USB_USBPHY_DIRECT_RX_DP_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_RX_DP_BITS   _u(0x00020000)
 #define USB_USBPHY_DIRECT_RX_DP_MSB    _u(17)
@@ -2438,8 +2606,7 @@
 #define USB_USBPHY_DIRECT_RX_DP_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_RX_DD
-// Description : Status bit from USB PHY
-//               RX Diff data
+// Description : Differential RX
 #define USB_USBPHY_DIRECT_RX_DD_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_RX_DD_BITS   _u(0x00010000)
 #define USB_USBPHY_DIRECT_RX_DD_MSB    _u(16)
@@ -2447,6 +2614,9 @@
 #define USB_USBPHY_DIRECT_RX_DD_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_DIFFMODE
+// Description : TX_DIFFMODE=0: Single ended mode
+//               TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE
+//               ignored)
 #define USB_USBPHY_DIRECT_TX_DIFFMODE_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_DIFFMODE_BITS   _u(0x00008000)
 #define USB_USBPHY_DIRECT_TX_DIFFMODE_MSB    _u(15)
@@ -2454,6 +2624,8 @@
 #define USB_USBPHY_DIRECT_TX_DIFFMODE_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_FSSLEW
+// Description : TX_FSSLEW=0: Low speed slew rate
+//               TX_FSSLEW=1: Full speed slew rate
 #define USB_USBPHY_DIRECT_TX_FSSLEW_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_FSSLEW_BITS   _u(0x00004000)
 #define USB_USBPHY_DIRECT_TX_FSSLEW_MSB    _u(14)
@@ -2461,6 +2633,8 @@
 #define USB_USBPHY_DIRECT_TX_FSSLEW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_PD
+// Description : TX power down override (if override enable is set). 1 = powered
+//               down.
 #define USB_USBPHY_DIRECT_TX_PD_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_PD_BITS   _u(0x00002000)
 #define USB_USBPHY_DIRECT_TX_PD_MSB    _u(13)
@@ -2468,6 +2642,8 @@
 #define USB_USBPHY_DIRECT_TX_PD_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_RX_PD
+// Description : RX power down override (if override enable is set). 1 = powered
+//               down.
 #define USB_USBPHY_DIRECT_RX_PD_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_RX_PD_BITS   _u(0x00001000)
 #define USB_USBPHY_DIRECT_RX_PD_MSB    _u(12)
@@ -2475,11 +2651,8 @@
 #define USB_USBPHY_DIRECT_RX_PD_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_DM
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               TX_SEMODE=0, Ignored
-//               TX_SEMODE=1, Drives DPM only. TX_DM_OE=1 to enable drive.
+// Description : Output data. TX_DIFFMODE=1, Ignored
+//               TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive.
 //               DPM=TX_DM
 #define USB_USBPHY_DIRECT_TX_DM_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_DM_BITS   _u(0x00000800)
@@ -2488,12 +2661,9 @@
 #define USB_USBPHY_DIRECT_TX_DM_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_DP
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               TX_SEMODE=0, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable
-//               drive. DPP=TX_DP, DPM=~TX_DP
-//               TX_SEMODE=1, Drives DPP only. TX_DP_OE=1 to enable drive.
+// Description : Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair.
+//               TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP
+//               If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive.
 //               DPP=TX_DP
 #define USB_USBPHY_DIRECT_TX_DP_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_DP_BITS   _u(0x00000400)
@@ -2502,12 +2672,9 @@
 #define USB_USBPHY_DIRECT_TX_DP_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_DM_OE
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               TX_SEMODE=0, Ignored.
-//               TX_SEMODE=1, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM
-//               driving
+// Description : Output enable. If TX_DIFFMODE=1, Ignored.
+//               If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 -
+//               DPM driving
 #define USB_USBPHY_DIRECT_TX_DM_OE_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_DM_OE_BITS   _u(0x00000200)
 #define USB_USBPHY_DIRECT_TX_DM_OE_MSB    _u(9)
@@ -2515,13 +2682,10 @@
 #define USB_USBPHY_DIRECT_TX_DM_OE_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_TX_DP_OE
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               TX_SEMODE=0, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z
-//               state; 1 - DPP/DPM driving
-//               TX_SEMODE=1, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP
-//               driving
+// Description : Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 -
+//               DPP/DPM in Hi-Z state; 1 - DPP/DPM driving
+//               If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 -
+//               DPP driving
 #define USB_USBPHY_DIRECT_TX_DP_OE_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_TX_DP_OE_BITS   _u(0x00000100)
 #define USB_USBPHY_DIRECT_TX_DP_OE_MSB    _u(8)
@@ -2529,10 +2693,7 @@
 #define USB_USBPHY_DIRECT_TX_DP_OE_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DM_PULLDN_EN
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               1 - Enable Rpd on DPM
+// Description : DM pull down enable
 #define USB_USBPHY_DIRECT_DM_PULLDN_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DM_PULLDN_EN_BITS   _u(0x00000040)
 #define USB_USBPHY_DIRECT_DM_PULLDN_EN_MSB    _u(6)
@@ -2540,10 +2701,7 @@
 #define USB_USBPHY_DIRECT_DM_PULLDN_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DM_PULLUP_EN
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               1 - Enable Rpu on DPM
+// Description : DM pull up enable
 #define USB_USBPHY_DIRECT_DM_PULLUP_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DM_PULLUP_EN_BITS   _u(0x00000020)
 #define USB_USBPHY_DIRECT_DM_PULLUP_EN_MSB    _u(5)
@@ -2551,8 +2709,8 @@
 #define USB_USBPHY_DIRECT_DM_PULLUP_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DM_PULLUP_HISEL
-// Description : when dm_pullup_en is set high, this enables second resistor. 0
-//               - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2
+// Description : Enable the second DM pull up resistor. 0 - Pull = Rpu2; 1 -
+//               Pull = Rpu1 + Rpu2
 #define USB_USBPHY_DIRECT_DM_PULLUP_HISEL_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DM_PULLUP_HISEL_BITS   _u(0x00000010)
 #define USB_USBPHY_DIRECT_DM_PULLUP_HISEL_MSB    _u(4)
@@ -2560,10 +2718,7 @@
 #define USB_USBPHY_DIRECT_DM_PULLUP_HISEL_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DP_PULLDN_EN
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
-//               1 - Enable Rpd on DPP
+// Description : DP pull down enable
 #define USB_USBPHY_DIRECT_DP_PULLDN_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DP_PULLDN_EN_BITS   _u(0x00000004)
 #define USB_USBPHY_DIRECT_DP_PULLDN_EN_MSB    _u(2)
@@ -2571,9 +2726,7 @@
 #define USB_USBPHY_DIRECT_DP_PULLDN_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DP_PULLUP_EN
-// Description : Value to drive to USB PHY when override enable is set (which
-//               will override the default value or value driven from USB
-//               controller
+// Description : DP pull up enable
 #define USB_USBPHY_DIRECT_DP_PULLUP_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DP_PULLUP_EN_BITS   _u(0x00000002)
 #define USB_USBPHY_DIRECT_DP_PULLUP_EN_MSB    _u(1)
@@ -2581,8 +2734,8 @@
 #define USB_USBPHY_DIRECT_DP_PULLUP_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_DP_PULLUP_HISEL
-// Description : when dp_pullup_en is set high, this enables second resistor. 0
-//               - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2
+// Description : Enable the second DP pull up resistor. 0 - Pull = Rpu2; 1 -
+//               Pull = Rpu1 + Rpu2
 #define USB_USBPHY_DIRECT_DP_PULLUP_HISEL_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_DP_PULLUP_HISEL_BITS   _u(0x00000001)
 #define USB_USBPHY_DIRECT_DP_PULLUP_HISEL_MSB    _u(0)
@@ -2590,11 +2743,13 @@
 #define USB_USBPHY_DIRECT_DP_PULLUP_HISEL_ACCESS "RW"
 // =============================================================================
 // Register    : USB_USBPHY_DIRECT_OVERRIDE
+// Description : Override enable for each control in usbphy_direct
 #define USB_USBPHY_DIRECT_OVERRIDE_OFFSET _u(0x00000080)
 #define USB_USBPHY_DIRECT_OVERRIDE_BITS   _u(0x00009fff)
 #define USB_USBPHY_DIRECT_OVERRIDE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_DIFFMODE_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DIFFMODE_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DIFFMODE_OVERRIDE_EN_BITS   _u(0x00008000)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DIFFMODE_OVERRIDE_EN_MSB    _u(15)
@@ -2602,6 +2757,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DIFFMODE_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_OVERRIDE_EN_BITS   _u(0x00001000)
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_OVERRIDE_EN_MSB    _u(12)
@@ -2609,6 +2765,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_FSSLEW_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_FSSLEW_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_FSSLEW_OVERRIDE_EN_BITS   _u(0x00000800)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_FSSLEW_OVERRIDE_EN_MSB    _u(11)
@@ -2616,6 +2773,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_FSSLEW_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_PD_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_PD_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_PD_OVERRIDE_EN_BITS   _u(0x00000400)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_PD_OVERRIDE_EN_MSB    _u(10)
@@ -2623,6 +2781,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_PD_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_RX_PD_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_RX_PD_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_RX_PD_OVERRIDE_EN_BITS   _u(0x00000200)
 #define USB_USBPHY_DIRECT_OVERRIDE_RX_PD_OVERRIDE_EN_MSB    _u(9)
@@ -2630,8 +2789,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_RX_PD_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OVERRIDE_EN_BITS   _u(0x00000100)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OVERRIDE_EN_MSB    _u(8)
@@ -2639,8 +2797,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OVERRIDE_EN_BITS   _u(0x00000080)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OVERRIDE_EN_MSB    _u(7)
@@ -2648,8 +2805,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OE_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OE_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OE_OVERRIDE_EN_BITS   _u(0x00000040)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OE_OVERRIDE_EN_MSB    _u(6)
@@ -2657,8 +2813,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DM_OE_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OE_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OE_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OE_OVERRIDE_EN_BITS   _u(0x00000020)
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OE_OVERRIDE_EN_MSB    _u(5)
@@ -2666,8 +2821,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_TX_DP_OE_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_DM_PULLDN_EN_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLDN_EN_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLDN_EN_OVERRIDE_EN_BITS   _u(0x00000010)
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLDN_EN_OVERRIDE_EN_MSB    _u(4)
@@ -2675,8 +2829,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLDN_EN_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_DP_PULLDN_EN_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLDN_EN_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLDN_EN_OVERRIDE_EN_BITS   _u(0x00000008)
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLDN_EN_OVERRIDE_EN_MSB    _u(3)
@@ -2684,8 +2837,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLDN_EN_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_EN_OVERRIDE_EN
-// Description : Override default value or value driven from USB Controller to
-//               PHY
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_EN_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_EN_OVERRIDE_EN_BITS   _u(0x00000004)
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_EN_OVERRIDE_EN_MSB    _u(2)
@@ -2693,6 +2845,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_EN_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_HISEL_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_HISEL_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_HISEL_OVERRIDE_EN_BITS   _u(0x00000002)
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_HISEL_OVERRIDE_EN_MSB    _u(1)
@@ -2700,6 +2853,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_DM_PULLUP_HISEL_OVERRIDE_EN_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_HISEL_OVERRIDE_EN
+// Description : None
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_HISEL_OVERRIDE_EN_RESET  _u(0x0)
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_HISEL_OVERRIDE_EN_BITS   _u(0x00000001)
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_HISEL_OVERRIDE_EN_MSB    _u(0)
@@ -2707,10 +2861,7 @@
 #define USB_USBPHY_DIRECT_OVERRIDE_DP_PULLUP_HISEL_OVERRIDE_EN_ACCESS "RW"
 // =============================================================================
 // Register    : USB_USBPHY_TRIM
-// Description : Note that most functions are driven directly from usb_fsls
-//               controller.  This register allows more detailed control/status
-//               from the USB PHY. Useful for debug but not expected to be used
-//               in normal operation
+// Description : Used to adjust trim values of USB phy pull down resistors.
 #define USB_USBPHY_TRIM_OFFSET _u(0x00000084)
 #define USB_USBPHY_TRIM_BITS   _u(0x00001f1f)
 #define USB_USBPHY_TRIM_RESET  _u(0x00001f1f)
@@ -2780,7 +2931,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTR_DEV_RESUME_FROM_HOST
 // Description : Set when the device receives a resume from the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTR_DEV_RESUME_FROM_HOST_RESET  _u(0x0)
 #define USB_INTR_DEV_RESUME_FROM_HOST_BITS   _u(0x00008000)
 #define USB_INTR_DEV_RESUME_FROM_HOST_MSB    _u(15)
@@ -2814,7 +2965,7 @@
 #define USB_INTR_BUS_RESET_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_INTR_VBUS_DETECT
-// Description : Source: SIE_STATUS.VBUS_DETECT
+// Description : Source: SIE_STATUS.VBUS_DETECTED
 #define USB_INTR_VBUS_DETECT_RESET  _u(0x0)
 #define USB_INTR_VBUS_DETECT_BITS   _u(0x00000800)
 #define USB_INTR_VBUS_DETECT_MSB    _u(11)
@@ -2898,7 +3049,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTR_HOST_RESUME
 // Description : Host: raised when a device wakes up the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTR_HOST_RESUME_RESET  _u(0x0)
 #define USB_INTR_HOST_RESUME_BITS   _u(0x00000002)
 #define USB_INTR_HOST_RESUME_MSB    _u(1)
@@ -2958,7 +3109,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTE_DEV_RESUME_FROM_HOST
 // Description : Set when the device receives a resume from the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTE_DEV_RESUME_FROM_HOST_RESET  _u(0x0)
 #define USB_INTE_DEV_RESUME_FROM_HOST_BITS   _u(0x00008000)
 #define USB_INTE_DEV_RESUME_FROM_HOST_MSB    _u(15)
@@ -2992,7 +3143,7 @@
 #define USB_INTE_BUS_RESET_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_INTE_VBUS_DETECT
-// Description : Source: SIE_STATUS.VBUS_DETECT
+// Description : Source: SIE_STATUS.VBUS_DETECTED
 #define USB_INTE_VBUS_DETECT_RESET  _u(0x0)
 #define USB_INTE_VBUS_DETECT_BITS   _u(0x00000800)
 #define USB_INTE_VBUS_DETECT_MSB    _u(11)
@@ -3076,7 +3227,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTE_HOST_RESUME
 // Description : Host: raised when a device wakes up the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTE_HOST_RESUME_RESET  _u(0x0)
 #define USB_INTE_HOST_RESUME_BITS   _u(0x00000002)
 #define USB_INTE_HOST_RESUME_MSB    _u(1)
@@ -3136,7 +3287,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTF_DEV_RESUME_FROM_HOST
 // Description : Set when the device receives a resume from the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTF_DEV_RESUME_FROM_HOST_RESET  _u(0x0)
 #define USB_INTF_DEV_RESUME_FROM_HOST_BITS   _u(0x00008000)
 #define USB_INTF_DEV_RESUME_FROM_HOST_MSB    _u(15)
@@ -3170,7 +3321,7 @@
 #define USB_INTF_BUS_RESET_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : USB_INTF_VBUS_DETECT
-// Description : Source: SIE_STATUS.VBUS_DETECT
+// Description : Source: SIE_STATUS.VBUS_DETECTED
 #define USB_INTF_VBUS_DETECT_RESET  _u(0x0)
 #define USB_INTF_VBUS_DETECT_BITS   _u(0x00000800)
 #define USB_INTF_VBUS_DETECT_MSB    _u(11)
@@ -3254,7 +3405,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTF_HOST_RESUME
 // Description : Host: raised when a device wakes up the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTF_HOST_RESUME_RESET  _u(0x0)
 #define USB_INTF_HOST_RESUME_BITS   _u(0x00000002)
 #define USB_INTF_HOST_RESUME_MSB    _u(1)
@@ -3314,7 +3465,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTS_DEV_RESUME_FROM_HOST
 // Description : Set when the device receives a resume from the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTS_DEV_RESUME_FROM_HOST_RESET  _u(0x0)
 #define USB_INTS_DEV_RESUME_FROM_HOST_BITS   _u(0x00008000)
 #define USB_INTS_DEV_RESUME_FROM_HOST_MSB    _u(15)
@@ -3348,7 +3499,7 @@
 #define USB_INTS_BUS_RESET_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : USB_INTS_VBUS_DETECT
-// Description : Source: SIE_STATUS.VBUS_DETECT
+// Description : Source: SIE_STATUS.VBUS_DETECTED
 #define USB_INTS_VBUS_DETECT_RESET  _u(0x0)
 #define USB_INTS_VBUS_DETECT_BITS   _u(0x00000800)
 #define USB_INTS_VBUS_DETECT_MSB    _u(11)
@@ -3432,7 +3583,7 @@
 // -----------------------------------------------------------------------------
 // Field       : USB_INTS_HOST_RESUME
 // Description : Host: raised when a device wakes up the host. Cleared by
-//               writing to SIE_STATUS.RESUME_REMOTE
+//               writing to SIE_STATUS.RESUME
 #define USB_INTS_HOST_RESUME_RESET  _u(0x0)
 #define USB_INTS_HOST_RESUME_BITS   _u(0x00000002)
 #define USB_INTS_HOST_RESUME_MSB    _u(1)
@@ -3449,5 +3600,4 @@
 #define USB_INTS_HOST_CONN_DIS_LSB    _u(0)
 #define USB_INTS_HOST_CONN_DIS_ACCESS "RO"
 // =============================================================================
-#endif // _HARDWARE_REGS_USB_H
-
+#endif // HARDWARE_REGS_USB_DEFINED

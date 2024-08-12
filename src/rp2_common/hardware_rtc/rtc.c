@@ -25,7 +25,8 @@ void rtc_init(void) {
     assert(rtc_freq != 0);
 
     // Take rtc out of reset now that we know clk_rtc is running
-    reset_unreset_block_num_wait_blocking(RESET_RTC);
+    reset_block(RESETS_RESET_RTC_BITS);
+    unreset_block_wait(RESETS_RESET_RTC_BITS);
 
     // Set up the 1 second divider.
     // If rtc_freq is 400 then clkdiv_m1 should be 399

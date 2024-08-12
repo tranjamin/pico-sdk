@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2022 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -11,8 +9,8 @@
 // Bus type       : apb
 // Description    : DMA with separate read and write masters
 // =============================================================================
-#ifndef _HARDWARE_REGS_DMA_H
-#define _HARDWARE_REGS_DMA_H
+#ifndef HARDWARE_REGS_DMA_DEFINED
+#define HARDWARE_REGS_DMA_DEFINED
 // =============================================================================
 // Register    : DMA_CH0_READ_ADDR
 // Description : DMA Channel 0 Read Address pointer
@@ -126,8 +124,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH0_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH0_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH0_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -170,15 +168,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH0_CTRL_TRIG_CHAIN_TO
@@ -211,11 +209,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH0_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH0_CTRL_TRIG_INCR_WRITE
@@ -249,14 +247,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH0_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -514,8 +512,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH1_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH1_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH1_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -558,15 +556,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH1_CTRL_TRIG_CHAIN_TO
@@ -599,11 +597,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH1_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH1_CTRL_TRIG_INCR_WRITE
@@ -637,14 +635,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH1_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -902,8 +900,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH2_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH2_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH2_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -946,15 +944,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH2_CTRL_TRIG_CHAIN_TO
@@ -987,11 +985,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH2_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH2_CTRL_TRIG_INCR_WRITE
@@ -1025,14 +1023,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH2_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -1290,8 +1288,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH3_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH3_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH3_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -1334,15 +1332,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH3_CTRL_TRIG_CHAIN_TO
@@ -1375,11 +1373,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH3_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH3_CTRL_TRIG_INCR_WRITE
@@ -1413,14 +1411,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH3_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -1678,8 +1676,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH4_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH4_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH4_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -1722,15 +1720,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH4_CTRL_TRIG_CHAIN_TO
@@ -1763,11 +1761,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH4_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH4_CTRL_TRIG_INCR_WRITE
@@ -1801,14 +1799,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH4_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -2066,8 +2064,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH5_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH5_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH5_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -2110,15 +2108,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH5_CTRL_TRIG_CHAIN_TO
@@ -2151,11 +2149,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH5_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH5_CTRL_TRIG_INCR_WRITE
@@ -2189,14 +2187,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH5_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -2454,8 +2452,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH6_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH6_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH6_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -2498,15 +2496,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH6_CTRL_TRIG_CHAIN_TO
@@ -2539,11 +2537,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH6_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH6_CTRL_TRIG_INCR_WRITE
@@ -2577,14 +2575,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH6_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -2842,8 +2840,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH7_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH7_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH7_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -2886,15 +2884,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH7_CTRL_TRIG_CHAIN_TO
@@ -2927,11 +2925,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH7_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH7_CTRL_TRIG_INCR_WRITE
@@ -2965,14 +2963,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH7_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -3230,8 +3228,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH8_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH8_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH8_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -3274,15 +3272,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH8_CTRL_TRIG_CHAIN_TO
@@ -3315,11 +3313,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH8_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH8_CTRL_TRIG_INCR_WRITE
@@ -3353,14 +3351,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH8_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -3618,8 +3616,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH9_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH9_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH9_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -3662,15 +3660,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH9_CTRL_TRIG_CHAIN_TO
@@ -3703,11 +3701,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH9_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH9_CTRL_TRIG_INCR_WRITE
@@ -3741,14 +3739,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH9_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -4006,8 +4004,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH10_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH10_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH10_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -4050,15 +4048,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH10_CTRL_TRIG_CHAIN_TO
@@ -4091,11 +4089,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH10_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH10_CTRL_TRIG_INCR_WRITE
@@ -4129,14 +4127,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH10_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -4394,8 +4392,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a per-
-//               control- block basis.
+//               This allows checksum to be enabled or disabled on a
+//               per-control- block basis.
 #define DMA_CH11_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH11_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH11_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -4438,15 +4436,15 @@
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
 #define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH11_CTRL_TRIG_CHAIN_TO
@@ -4479,11 +4477,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_MSB    _u(9)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_LSB    _u(6)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_ACCESS "RW"
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_MSB             _u(9)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_LSB             _u(6)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
 #define DMA_CH11_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH11_CTRL_TRIG_INCR_WRITE
@@ -4517,14 +4515,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
 #define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH11_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -4927,23 +4925,26 @@
 #define DMA_SNIFF_CTRL_BSWAP_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : DMA_SNIFF_CTRL_CALC
-//               0x0 -> Calculate a CRC-32 (IEEE802.3 polynomial)
-//               0x1 -> Calculate a CRC-32 (IEEE802.3 polynomial) with bit reversed data
+// Description : 0x0 -> Calculate a CRC-32 (IEEE802.3 polynomial)
+//               0x1 -> Calculate a CRC-32 (IEEE802.3 polynomial) with bit
+//               reversed data
 //               0x2 -> Calculate a CRC-16-CCITT
 //               0x3 -> Calculate a CRC-16-CCITT with bit reversed data
-//               0xe -> XOR reduction over all data. == 1 if the total 1 population count is odd.
-//               0xf -> Calculate a simple 32-bit checksum (addition with a 32 bit accumulator)
-#define DMA_SNIFF_CTRL_CALC_RESET  _u(0x0)
-#define DMA_SNIFF_CTRL_CALC_BITS   _u(0x000001e0)
-#define DMA_SNIFF_CTRL_CALC_MSB    _u(8)
-#define DMA_SNIFF_CTRL_CALC_LSB    _u(5)
-#define DMA_SNIFF_CTRL_CALC_ACCESS "RW"
-#define DMA_SNIFF_CTRL_CALC_VALUE_CRC32 _u(0x0)
+//               0xe -> XOR reduction over all data. == 1 if the total 1
+//               population count is odd.
+//               0xf -> Calculate a simple 32-bit checksum (addition with a 32
+//               bit accumulator)
+#define DMA_SNIFF_CTRL_CALC_RESET        _u(0x0)
+#define DMA_SNIFF_CTRL_CALC_BITS         _u(0x000001e0)
+#define DMA_SNIFF_CTRL_CALC_MSB          _u(8)
+#define DMA_SNIFF_CTRL_CALC_LSB          _u(5)
+#define DMA_SNIFF_CTRL_CALC_ACCESS       "RW"
+#define DMA_SNIFF_CTRL_CALC_VALUE_CRC32  _u(0x0)
 #define DMA_SNIFF_CTRL_CALC_VALUE_CRC32R _u(0x1)
-#define DMA_SNIFF_CTRL_CALC_VALUE_CRC16 _u(0x2)
+#define DMA_SNIFF_CTRL_CALC_VALUE_CRC16  _u(0x2)
 #define DMA_SNIFF_CTRL_CALC_VALUE_CRC16R _u(0x3)
-#define DMA_SNIFF_CTRL_CALC_VALUE_EVEN _u(0xe)
-#define DMA_SNIFF_CTRL_CALC_VALUE_SUM _u(0xf)
+#define DMA_SNIFF_CTRL_CALC_VALUE_EVEN   _u(0xe)
+#define DMA_SNIFF_CTRL_CALC_VALUE_SUM    _u(0xf)
 // -----------------------------------------------------------------------------
 // Field       : DMA_SNIFF_CTRL_DMACH
 // Description : DMA channel for Sniffer to observe
@@ -5297,5 +5298,4 @@
 #define DMA_CH11_DBG_TCR_LSB    _u(0)
 #define DMA_CH11_DBG_TCR_ACCESS "RO"
 // =============================================================================
-#endif // _HARDWARE_REGS_DMA_H
-
+#endif // HARDWARE_REGS_DMA_DEFINED

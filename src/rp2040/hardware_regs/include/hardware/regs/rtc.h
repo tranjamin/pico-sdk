@@ -1,7 +1,5 @@
-// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
-
 /**
- * Copyright (c) 2024 Raspberry Pi Ltd.
+ * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -11,8 +9,8 @@
 // Bus type       : apb
 // Description    : Register block to control RTC
 // =============================================================================
-#ifndef _HARDWARE_REGS_RTC_H
-#define _HARDWARE_REGS_RTC_H
+#ifndef HARDWARE_REGS_RTC_DEFINED
+#define HARDWARE_REGS_RTC_DEFINED
 // =============================================================================
 // Register    : RTC_CLKDIV_M1
 // Description : Divider minus 1 for the 1 second counter. Safe to change the
@@ -138,6 +136,7 @@
 #define RTC_IRQ_SETUP_0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : RTC_IRQ_SETUP_0_MATCH_ACTIVE
+// Description : None
 #define RTC_IRQ_SETUP_0_MATCH_ACTIVE_RESET  "-"
 #define RTC_IRQ_SETUP_0_MATCH_ACTIVE_BITS   _u(0x20000000)
 #define RTC_IRQ_SETUP_0_MATCH_ACTIVE_MSB    _u(29)
@@ -347,6 +346,7 @@
 #define RTC_INTR_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : RTC_INTR_RTC
+// Description : None
 #define RTC_INTR_RTC_RESET  _u(0x0)
 #define RTC_INTR_RTC_BITS   _u(0x00000001)
 #define RTC_INTR_RTC_MSB    _u(0)
@@ -360,6 +360,7 @@
 #define RTC_INTE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : RTC_INTE_RTC
+// Description : None
 #define RTC_INTE_RTC_RESET  _u(0x0)
 #define RTC_INTE_RTC_BITS   _u(0x00000001)
 #define RTC_INTE_RTC_MSB    _u(0)
@@ -373,6 +374,7 @@
 #define RTC_INTF_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : RTC_INTF_RTC
+// Description : None
 #define RTC_INTF_RTC_RESET  _u(0x0)
 #define RTC_INTF_RTC_BITS   _u(0x00000001)
 #define RTC_INTF_RTC_MSB    _u(0)
@@ -386,11 +388,11 @@
 #define RTC_INTS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : RTC_INTS_RTC
+// Description : None
 #define RTC_INTS_RTC_RESET  _u(0x0)
 #define RTC_INTS_RTC_BITS   _u(0x00000001)
 #define RTC_INTS_RTC_MSB    _u(0)
 #define RTC_INTS_RTC_LSB    _u(0)
 #define RTC_INTS_RTC_ACCESS "RO"
 // =============================================================================
-#endif // _HARDWARE_REGS_RTC_H
-
+#endif // HARDWARE_REGS_RTC_DEFINED

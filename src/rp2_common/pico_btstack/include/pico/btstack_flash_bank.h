@@ -8,7 +8,6 @@
 #define _PICO_BTSTACK_FLASH_BANK_H
 
 #include "pico.h"
-#include "hardware/flash.h"
 #include "hal_flash_bank.h"
 
 #ifdef __cplusplus

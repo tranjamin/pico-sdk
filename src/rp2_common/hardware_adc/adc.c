@@ -10,7 +10,8 @@
 
 void adc_init(void) {
     // ADC is in an unknown state. We should start by resetting it
-    reset_unreset_block_num_wait_blocking(RESET_ADC);
+    reset_block(RESETS_RESET_ADC_BITS);
+    unreset_block_wait(RESETS_RESET_ADC_BITS);
 
     // Now turn it back on. Staging of clock etc is handled internally
     adc_hw->cs = ADC_CS_EN_BITS;

@@ -1,6 +1,6 @@
 /**
  * \defgroup pico_standard_link pico_standard_link
- * \brief Setup for link options for a standard SDK executable
+ * \brief Standard link step providing the basics for creating a runnable binary
  * 
  * This includes
  *   - C runtime initialization

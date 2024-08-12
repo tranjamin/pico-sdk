@@ -42,6 +42,8 @@ enum gpio_drive_strength {
 #define GPIO_OUT 1
 #define GPIO_IN 0
 
+#define NUM_BANK0_GPIOS 30
+
 // ----------------------------------------------------------------------------
 // Pad Controls + IO Muxing
 // ----------------------------------------------------------------------------

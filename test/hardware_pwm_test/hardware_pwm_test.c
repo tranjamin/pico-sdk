@@ -32,7 +32,8 @@ void on_pwm_wrap() {
 }
 
 int main() {
-    reset_unreset_block_num_wait_blocking(RESET_PWM);
+    reset_block(RESETS_RESET_PWM_BITS);
+    unreset_block_wait(RESETS_RESET_PWM_BITS);
 
     setup_default_uart();
 
@@ -134,8 +135,8 @@ int main() {
 
     PICOTEST_START_SECTION("PWM IRQ tests");
 
-        irq_set_exclusive_handler(PWM_DEFAULT_IRQ_NUM(), on_pwm_wrap);
-        irq_set_enabled(PWM_DEFAULT_IRQ_NUM(), true);
+        irq_set_exclusive_handler(PWM_IRQ_WRAP, on_pwm_wrap);
+        irq_set_enabled(PWM_IRQ_WRAP, true);
 
         config = pwm_get_default_config();
 
@@ -150,13 +151,14 @@ int main() {
         }
 
         // Now enable all the PWM at the same time.
-        pwm_set_mask_enabled((1 << NUM_PWM_SLICES) - 1);
+        pwm_set_mask_enabled(0xff);
+
         sleep_ms(1000);
 
         int err = 0;
 
         for (int p = 0; p < NUM_PWM_SLICES; p++) {
-            PICOTEST_CHECK_CHANNEL(p, interrupt_states[p].count != 0, "No interrupts detected from PWM\n");
+            PICOTEST_CHECK_CHANNEL(p, interrupt_states[p].count != 0, "No interrupts detected from PWM %d\n");
         }
 
     PICOTEST_END_SECTION();
